@@ -26,7 +26,7 @@ export default function SocialSection() {
               </div>
               <div className="p-4">
                 <iframe
-                  src="https://www.instagram.com/p/Cz8xY9Nj8lA/embed"
+                  src="https://www.instagram.com/ohtawaraonsen/p/DIG1tLUzoMv/"
                   width="100%"
                   height="500"
                   className="rounded-lg border-0"
