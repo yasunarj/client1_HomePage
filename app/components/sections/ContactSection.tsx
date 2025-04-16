@@ -1,73 +1,73 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Container from '../layout/Container';
+import { useState } from "react";
+import Container from "../layout/Container";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus('idle');
+    setSubmitStatus("idle");
 
     try {
       // ここで実際のAPIエンドポイントに送信
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', message: '' });
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", message: "" });
       } else {
-        setSubmitStatus('error');
+        setSubmitStatus("error");
       }
     } catch (error) {
-      setSubmitStatus('error');
+      console.error(error);
+      setSubmitStatus(`error`);
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   return (
     <section id="contact" className="py-20 bg-gray-900 text-white">
       <Container>
-        <h2 className="text-4xl font-bold text-center mb-16">
-          お問い合わせ
-        </h2>
+        <h2 className="text-4xl font-bold text-center mb-16">お問い合わせ</h2>
         <div className="max-w-2xl mx-auto">
-          {submitStatus === 'success' && (
+          {submitStatus === "success" && (
             <div className="mb-6 p-4 bg-green-500 text-white rounded-lg">
               お問い合わせありがとうございます。内容を確認次第、ご連絡させていただきます。
             </div>
           )}
-          {submitStatus === 'error' && (
+          {submitStatus === "error" && (
             <div className="mb-6 p-4 bg-red-500 text-white rounded-lg">
               送信に失敗しました。もう一度お試しください。
             </div>
           )}
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium mb-2"
-              >
+              <label htmlFor="name" className="block text-sm font-medium mb-2">
                 お名前
               </label>
               <input
@@ -81,10 +81,7 @@ export default function ContactSection() {
               />
             </div>
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium mb-2"
-              >
+              <label htmlFor="email" className="block text-sm font-medium mb-2">
                 メールアドレス
               </label>
               <input
@@ -119,11 +116,11 @@ export default function ContactSection() {
               disabled={isSubmitting}
               className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? '送信中...' : '送信する'}
+              {isSubmitting ? "送信中..." : "送信する"}
             </button>
           </form>
         </div>
       </Container>
     </section>
   );
-} 
+}
