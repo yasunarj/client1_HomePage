@@ -33,7 +33,7 @@ export default function SocialSection() {
                 ></iframe>
                 <div className="mt-4 text-center">
                   <a
-                    href="https://www.instagram.com/ohtawaraonsen/p/DIG1tLUzoMv/"
+                    href="https://www.instagram.com/ohtawaraonsen/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500 to-red-600 text-white rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300"
