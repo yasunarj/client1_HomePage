@@ -8,7 +8,8 @@ export default function HeroSection() {
         alt="サウナの熱波"
         fill
         className="object-cover object-[65%_20%] sm:object-center"
-        priority
+        loading="eager"
+        priority={true}
       />
       <div className="absolute inset-0 bg-black/40"></div>
       <div className="relative z-10 text-center text-white px-4">
