@@ -5,6 +5,7 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import SplashScreen from "./components/sections/SplashScreen";
 import HeroSection from "./components/sections/HeroSection";
+import WhatIsNeppashiSection from "./components/sections/WhatIsNeppashiSection";
 import ProfileSection from "./components/sections/ProfileSection";
 import PerformanceSection from "./components/sections/PerformanceSection";
 import FAQSection from "./components/sections/FAQSection";
@@ -18,54 +19,41 @@ import TestimonialsSection from "./components/sections/TestimonialsSection";
 import ContactSection from "./components/sections/ContactSection";
 
 export default function Home() {
-  const [isSplashVisible, setIsSplashVisible] = useState(true);
-  const [isMainVisible, setIsMainVisible] = useState(false);
+  const [showMain, setShowMain] = useState(false);
+  const [isFading, setIsFading] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsSplashVisible(false); // Splashを非表示（フェードアウト）
-      setIsMainVisible(true); // Mainを表示（フェードイン）
-    }, 3000); // Splash表示3秒 + フェードアウト1秒
+      setIsFading(true);
+      setTimeout(() => {
+        setShowMain(true);
+      }, 1000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
 
-  return (
-    <>
-      {/* Splash */}
-      <div
-        className={`fixed inset-0 z-50 transition-opacity duration-1000 bg-white ${
-          isSplashVisible
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }`}
-      >
-        <SplashScreen isFading={!isSplashVisible} />
-      </div>
+  if (!showMain) {
+    return <SplashScreen isFading={isFading} />;
+  }
 
-      {/* Main */}
-      <div
-        className={`transition-opacity duration-1000 ${
-          isMainVisible ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <Header />
-        <main className="min-h-screen pt-16">
-          <HeroSection />
-          <ProfileSection />
-          <PerformanceSection />
-          <GallerySection />
-          <TestimonialsSection />
-          <CollaborationSection />
-          <PricingSection />
-          <FAQSection />
-          <ScheduleSection />
-          <TrainingSection />
-          <SocialSection />
-          <ContactSection />
-        </main>
-        <Footer />
-      </div>
-    </>
+  return (
+    <main>
+      <Header />
+      <HeroSection />
+      <WhatIsNeppashiSection />
+      <ProfileSection />
+      <PerformanceSection />
+      <FAQSection />
+      <PricingSection />
+      <GallerySection />
+      <CollaborationSection />
+      <TrainingSection />
+      <ScheduleSection />
+      <SocialSection />
+      <TestimonialsSection />
+      <ContactSection />
+      <Footer />
+    </main>
   );
 }

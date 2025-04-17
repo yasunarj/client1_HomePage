@@ -31,7 +31,7 @@ export default function SocialSection() {
                   height="500"
                   className="rounded-lg border-0"
                 ></iframe>
-                <div className="mt-4 text-center">
+                <div className="mt-12 text-center">
                   <a
                     href="https://www.instagram.com/ohtawaraonsen/"
                     target="_blank"
@@ -59,13 +59,13 @@ export default function SocialSection() {
 
           {/* 個人用Instagram */}
           <div className="w-full max-w-md mx-auto h-full min-h-[500px]">
-            <div className="flex flex-col bg-white rounded-xl shadow-lg overflow-hidden h-[688px] overflow-y-scroll">
+            <div className="flex flex-col bg-white rounded-xl shadow-lg overflow-hidden h-[688px]">
               <div className="bg-gradient-to-r from-orange-500 to-red-600">
                 <h3 className="text-xl font-bold text-white text-center">
                   熱波師のInstagram
                 </h3>
               </div>
-              <div className="p-4">
+              <div className="p-4 overflow-y-scroll">
                 <div className="grid grid-cols-1 gap-6">
                   {staffInstagramList.map((person, index) => (
                     <div

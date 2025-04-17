@@ -3,13 +3,13 @@ import Container from "../layout/Container";
 export default function PricingSection() {
   return (
     <section
-      className="relative py-20 bg-cover bg-center"
+      className="relative py-20 bg-gray-50 bg-cover bg-center"
       style={{
         backgroundImage:
           "url('/images/pngtree-natural-wood-paneling-lines-the-interior-of-the-sauna-ideal-for-background-or-texture-photo-image_33945628.jpg')",
       }}
     >
-      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute inset-0 bg-black/20 z-0"></div>
       <div className="relative z-10">
         <Container>
           <h2 className="text-4xl font-bold text-center mb-16">
