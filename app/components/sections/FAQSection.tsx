@@ -10,9 +10,15 @@ export default function FAQSection() {
         </h2>
         <div className="max-w-3xl mx-auto space-y-6 mb-4">
           {questionList.map((faq, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold mb-2">{faq.question}</h3>
-              <p className="text-gray-600">{faq.answer}</p>
+            <div key={index} className="bg-white p-6 rounded-lg shadow-lg space-y-4">
+              <div className="flex">
+                <span className="text-orange-500 font-bold text-xl mr-2">Q.</span>
+                <h3 className="text-xl font-bold mb-2">{faq.question}</h3>
+              </div>
+              <div className="flex">
+                <span className="mr-7"></span>
+                <p className="text-gray-600">{faq.answer}</p>
+              </div>
             </div>
           ))}
         </div>

@@ -3,11 +3,13 @@ import Container from "../layout/Container";
 
 export default function PerformanceSection() {
   return (
-    <section className="relative py-20 bg-gray-50 bg-cover bg-center"
-    style={{
-      backgroundImage:
-        "url('/images/pngtree-natural-wood-paneling-lines-the-interior-of-the-sauna-ideal-for-background-or-texture-photo-image_33945628.jpg')",
-    }}>
+    <section
+      className="relative py-20 bg-gray-50 bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "url('/images/pngtree-natural-wood-paneling-lines-the-interior-of-the-sauna-ideal-for-background-or-texture-photo-image_33945628.jpg')",
+      }}
+    >
       <div className="absolute inset-0 bg-black/20 z-0"></div>
       <div className="relative z-10">
         <Container>
@@ -29,8 +31,18 @@ export default function PerformanceSection() {
                 </div>
               ))}
             </div>
-            <div className="aspect-video bg-gray-200 rounded-lg mb-12">
-              ここに枠に演出動画を入れてみてはどうでしょうか？
+            <div className="aspect-video bg-gray-200 rounded-lg md:mb-12">
+              <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/I97LDZ97h0s" // ←ここに実際のYouTube動画IDを入れてください
+                  title="熱波パフォーマンス動画"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+              ここは自分たちの実際の動画を挿入してください
               {/* 動画プレイヤー */}
             </div>
           </div>
