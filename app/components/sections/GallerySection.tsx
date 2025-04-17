@@ -20,6 +20,7 @@ export default function GallerySection() {
                   className="object-cover"
                   alt="ギャラリー画像"
                   loading="eager"
+                  priority={index < 4}
                 />
               </div>
             ))}
