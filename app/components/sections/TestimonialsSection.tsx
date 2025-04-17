@@ -9,7 +9,7 @@ export default function TestimonialsSection() {
         <h2 className="text-4xl font-bold text-center mb-16">
           <span>お客様の声</span>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-4">
           {customerList.map((testimonial, index) => (
             <div key={index} className="bg-white p-8 shadow-lg rounded-lg">
               <div className="flex items-center mb-4">

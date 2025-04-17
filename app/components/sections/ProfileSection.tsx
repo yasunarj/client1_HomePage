@@ -11,7 +11,7 @@ export default function ProfileSection() {
           <h2 className="text-4xl font-bold text-center mb-16">
             <span>熱波師プロフィール</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-4">
             {staffList.map((staff, index) => (
               <div
                 key={index}

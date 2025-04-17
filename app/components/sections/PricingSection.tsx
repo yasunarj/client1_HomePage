@@ -1,3 +1,4 @@
+import { planList } from "@/app/lib/planList";
 import Container from "../layout/Container";
 
 export default function PricingSection() {
@@ -16,26 +17,7 @@ export default function PricingSection() {
             <span className="text-white">料金プラン</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {[
-              {
-                name: "ベーシック",
-                duration: "1時間",
-                description: "基本的な熱波体験",
-                price: "応相談",
-              },
-              {
-                name: "イベント対応",
-                duration: "3時間",
-                description: "イベント向け熱波パフォーマンス",
-                price: "応相談",
-              },
-              {
-                name: "法人研修",
-                duration: "1日",
-                description: "スタッフ向け熱波技術研修",
-                price: "応相談",
-              },
-            ].map((plan, index) => (
+            {planList.map((plan, index) => (
               <div
                 key={index}
                 className="bg-white p-8 rounded-lg shadow-lg text-center"

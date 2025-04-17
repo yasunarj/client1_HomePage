@@ -8,7 +8,7 @@ export default function CollaborationSection() {
           <h2 className="text-4xl font-bold text-center mb-16">
             コラボ実績・メディア掲載
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-4">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-bold mb-4">コラボ実績</h3>
               <ul className="space-y-2 text-gray-600">

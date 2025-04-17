@@ -1,3 +1,4 @@
+import { stepList } from "@/app/lib/stepList";
 import Container from "../layout/Container";
 
 export default function PerformanceSection() {
@@ -15,23 +16,7 @@ export default function PerformanceSection() {
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {[
-                {
-                  step: "ステップ1",
-                  title: "入場",
-                  description: "サウナ室に入室し、準備運動を行います。",
-                },
-                {
-                  step: "ステップ2",
-                  title: "ロウリュ",
-                  description: "水を注ぎ、蒸気を発生させます。",
-                },
-                {
-                  step: "ステップ3",
-                  title: "熱波",
-                  description: "タオルを使って熱波を演出します。",
-                },
-              ].map((step, index) => (
+              {stepList.map((step, index) => (
                 <div
                   key={index}
                   className="bg-white p-6 rounded-lg shadow-lg text-center"
