@@ -9,7 +9,8 @@ export default function HeroSection() {
         fill
         className="object-cover object-[65%_20%] sm:object-center"
         loading="eager"
-        priority={true}
+        priority
+        quality={80}
       />
       <div className="absolute inset-0 bg-black/40"></div>
       <div className="relative z-10 text-center text-white px-4">

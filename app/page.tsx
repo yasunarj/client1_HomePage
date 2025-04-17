@@ -17,6 +17,7 @@ import ScheduleSection from "./components/sections/ScheduleSection";
 import SocialSection from "./components/sections/SocialSection";
 import TestimonialsSection from "./components/sections/TestimonialsSection";
 import ContactSection from "./components/sections/ContactSection";
+import ScrollToTop from "./components/scroll/ScrollToTop";
 
 export default function Home() {
   const [showMain, setShowMain] = useState(false);
@@ -53,6 +54,7 @@ export default function Home() {
       <SocialSection />
       <TestimonialsSection />
       <ContactSection />
+      <ScrollToTop />
       <Footer />
     </main>
   );
