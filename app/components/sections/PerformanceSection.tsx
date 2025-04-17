@@ -42,7 +42,7 @@ export default function PerformanceSection() {
                   className="w-full h-full"
                 ></iframe>
               </div>
-              ここは自分たちの実際の動画を挿入してください
+              <span className="text-2xl">ここは自分たちの実際の動画を挿入してください</span>
               {/* 動画プレイヤー */}
             </div>
           </div>
