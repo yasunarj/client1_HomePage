@@ -19,6 +19,7 @@ export default function GallerySection() {
                   fill
                   className="object-cover"
                   alt="ギャラリー画像"
+                  loading="eager"
                 />
               </div>
             ))}
