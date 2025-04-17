@@ -66,7 +66,7 @@ export default function Header() {
               : "opacity-0 -translate-y-full"
           }`}
         >
-          <div className="w-full mx-auto px-4 py-4 bg-white/70">
+          <div className="w-full mx-auto px-4 py-4 bg-white/90">
             <div className="flex justify-between items-center mb-8">
               <Link href="/" className="flex items-center">
                 <div className="w-10 h-10 bg-orange-500 rounded-full mr-3">
