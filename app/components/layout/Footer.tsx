@@ -1,9 +1,11 @@
+import { shippori } from "@/app/lib/fonts";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-8 md:mb-0">
+          <div className={`mb-8 md:mb-0 ${shippori.className}`}>
             <h3 className="text-2xl font-bold mb-4">大田原熱波協会</h3>
             <p className="text-gray-400">心と体を癒す、究極のサウナ体験を提供します</p>
           </div>
