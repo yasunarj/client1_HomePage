@@ -15,11 +15,12 @@ import SocialSection from "./components/sections/SocialSection";
 import TestimonialsSection from "./components/sections/TestimonialsSection";
 import ContactSection from "./components/sections/ContactSection";
 import ScrollToTop from "./components/scroll/ScrollToTop";
+import FadeInMain from "./components/sections/fadeIn/FadeInMain";
 
 export default function Home() {
   return (
     <ClientSplashWrapper>
-      <main>
+      <FadeInMain>
         <Header />
         <HeroSection />
         <WhatIsNeppashiSection />
@@ -36,7 +37,7 @@ export default function Home() {
         <ContactSection />
         <ScrollToTop />
         <Footer />
-      </main>
+      </FadeInMain>
     </ClientSplashWrapper>
   );
 }
