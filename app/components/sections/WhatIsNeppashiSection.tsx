@@ -1,12 +1,19 @@
+"use client";
+
 import Container from "../layout/Container";
+import { useFadeInOnView } from "@/hooks/useFadeInOnView";
 
 export default function WhatIsNeppashiSection() {
+  const title = useFadeInOnView();
+  const text = useFadeInOnView();
+  const image = useFadeInOnView();
+
   return (
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <Container>
         <div className="max-w-5xl mx-auto overflow-hidden p-2">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-1 text-gray-900">
+            <h2 ref={title.ref} className={`text-4xl font-bold mb-1 reveal-text ${ title.isVisible ? "revealed" : ""}`}>
               熱波師とは？
             </h2>
             <div className="w-52 h-1 bg-gradient-to-r from-orange-300 to-red-600 mx-auto rounded-full translate-x-[-4px]"></div>
@@ -14,7 +21,7 @@ export default function WhatIsNeppashiSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* 左側：説明文 */}
-            <div className="space-y-6">
+            <div ref={text.ref} className={`space-y-6 transition-opacity duration-500 ${text.isVisible ? "opacity-100" : "opacity-0"}`}>
               <p className="text-lg leading-relaxed text-gray-700">
                 熱波師（ねっぱし）は、サウナ室でロウリュ（蒸気）を発生させ、
                 タオルや専用の道具を使って熱波（あつい空気）をお客様に届けるプロフェッショナルです。
@@ -32,7 +39,7 @@ export default function WhatIsNeppashiSection() {
             {/* 右側：ビジュアル要素 */}
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-600/20 rounded-2xl transform rotate-2"></div>
-              <div className="relative bg-white p-8 rounded-2xl shadow-xl">
+              <div ref={image.ref} className={`relative bg-white p-8 rounded-2xl shadow-xl transition-opacity duration-500 ${image.isVisible ? "opacity-100" : "opacity-0"}`}>
                 <div className="grid grid-cols-2 gap-4">
                   {/* アイコン1 */}
                   <div className="bg-orange-50 py-6 px-3 rounded-xl text-center">

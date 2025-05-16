@@ -77,7 +77,7 @@ export default function Header() {
                     </span>
                   </div>
                 </div>
-                <span className="text-xl font-bold">大田原熱波協会</span>
+                <span className={`text-xl font-bold ${shippori.className}`}>大田原熱波協会</span>
               </Link>
               <button
                 className="p-2 rounded-lg hover:bg-gray-100 z-50 relative w-8 h-8"

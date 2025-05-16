@@ -1,14 +1,19 @@
+"use client";
+
 import Container from '../layout/Container';
+import { useFadeInOnView } from '@/hooks/useFadeInOnView';
 
 export default function TrainingSection() {
+  const title = useFadeInOnView();
+  const fade = useFadeInOnView();
   return (
     <section className="py-20 bg-gray-50">
       <Container>
-        <h2 className="text-4xl font-bold text-center mb-16">
+        <h2 ref={title.ref} className={`text-4xl font-bold text-center mb-16 reveal-text ${title.isVisible ? "revealed" : ""}`}>
           熱波師になるには
         </h2>
         <div className="max-w-3xl mx-auto mb-4">
-          <div className="bg-white p-8 rounded-lg shadow-lg">
+          <div ref={fade.ref} className={`bg-white p-8 rounded-lg shadow-lg transition-opacity duration-500 ${fade.isVisible ? "opacity-100" : "opacity-0"}`}>
             <h3 className="text-2xl font-bold mb-6">育成プログラム</h3>
             <p className="text-gray-600 mb-6">
               当協会では、熱波文化を広げるために熱波師の育成プログラムを実施しています。

@@ -1,9 +1,6 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
-import SplashScreen from "./components/sections/SplashScreen";
+import ClientSplashWrapper from "./components/splash/ClientSplashWrapper";
 import HeroSection from "./components/sections/HeroSection";
 import WhatIsNeppashiSection from "./components/sections/WhatIsNeppashiSection";
 import ProfileSection from "./components/sections/ProfileSection";
@@ -20,42 +17,26 @@ import ContactSection from "./components/sections/ContactSection";
 import ScrollToTop from "./components/scroll/ScrollToTop";
 
 export default function Home() {
-  const [showMain, setShowMain] = useState(false);
-  const [isFading, setIsFading] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsFading(true);
-      setTimeout(() => {
-        setShowMain(true);
-      }, 1000);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!showMain) {
-    return <SplashScreen isFading={isFading} />;
-  }
-
   return (
-    <main>
-      <Header />
-      <HeroSection />
-      <WhatIsNeppashiSection />
-      <ProfileSection />
-      <PerformanceSection />
-      <FAQSection />
-      <PricingSection />
-      <GallerySection />
-      <CollaborationSection />
-      <TrainingSection />
-      <ScheduleSection />
-      <SocialSection />
-      <TestimonialsSection />
-      <ContactSection />
-      <ScrollToTop />
-      <Footer />
-    </main>
+    <ClientSplashWrapper>
+      <main>
+        <Header />
+        <HeroSection />
+        <WhatIsNeppashiSection />
+        <ProfileSection />
+        <PerformanceSection />
+        <FAQSection />
+        <PricingSection />
+        <GallerySection />
+        <CollaborationSection />
+        <TrainingSection />
+        <ScheduleSection />
+        <SocialSection />
+        <TestimonialsSection />
+        <ContactSection />
+        <ScrollToTop />
+        <Footer />
+      </main>
+    </ClientSplashWrapper>
   );
 }

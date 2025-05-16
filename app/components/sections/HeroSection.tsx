@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-black">
+    <section className="relative h-[100dvh] flex items-center justify-center bg-black">
       <Image
         src="/images/gallery1.jpg"
         alt="サウナの熱波"
