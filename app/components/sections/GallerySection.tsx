@@ -11,7 +11,7 @@ export default function GallerySection() {
   return (
     <section className="py-20 bg-gray-50">
       <Container>
-        <h2 ref={title.ref} className={`text-4xl font-bold text-center mb-16 reveal-text ${title.isVisible ? "revealed" : ""}`}>ギャラリー</h2>
+        <h2 ref={title.ref} className={`text-3xl sm:text-4xl font-bold text-center mb-16 reveal-text ${title.isVisible ? "revealed" : ""}`}>ギャラリー</h2>
         <div ref={galleryImage.ref} className={`overflow-x-auto transition-opacity duration-500 ${galleryImage.isVisible ? "opacity-100" : "opacity-0"}`}>
           <div className="flex gap-4 w-max pb-4">
             {galleries.map((src, index) => (

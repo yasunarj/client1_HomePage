@@ -4,7 +4,7 @@ export const staffList = [
     role: "代表熱波師",
     src: "/images/IMG_2959.png",
     description:
-      "フィンランドでの研修経験あり。ダンディーな見た目ながら繊細な熱波を提供。",
+      "",
   },
   {
     name: "あっしー",
@@ -13,7 +13,7 @@ export const staffList = [
     description: "神奈川県の激戦区で認められた熱波師",
   },
   {
-    name: "熱虎",
+    name: "熱寅",
     role: "熱波師",
     src: "/images/IMG_2958.png",
     description: "アロマテラピーの知識を活かした香りと熱波の融合を得意とする。",

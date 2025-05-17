@@ -12,7 +12,7 @@ const ScheduleCard = ({ schedule }: { schedule: ScheduleCardProps }) => {
   return (
     <div
       ref={fade.ref}
-      className={`flex space-x-6 items-center p-4 border-b border-gray-200 transition-opacity duration-500 ${
+      className={`flex flex-col gap-2 sm:gap-0 sm:flex-row space-x-6 sm:items-center p-4 border-b border-gray-200 transition-opacity duration-500 ${
         fade.isVisible ? "opacity-100" : "opacity-0"
       }`}
     >

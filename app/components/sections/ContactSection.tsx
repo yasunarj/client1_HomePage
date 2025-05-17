@@ -53,7 +53,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-20 bg-gray-900 text-white">
       <Container>
-        <h2 className="text-4xl font-bold text-center mb-16">お問い合わせ</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">お問い合わせ</h2>
         <div className="max-w-2xl mx-auto">
           {submitStatus === "success" && (
             <div className="mb-6 p-4 bg-green-500 text-white rounded-lg">

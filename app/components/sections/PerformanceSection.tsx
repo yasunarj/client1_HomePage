@@ -19,7 +19,7 @@ export default function PerformanceSection() {
       <div className="absolute inset-0 bg-black/20 z-0"></div>
       <div className="relative z-10">
         <Container>
-          <h2 ref={title.ref} className="text-4xl font-bold text-center mb-16">
+          <h2 ref={title.ref} className="text-3xl sm:text-4xl font-bold text-center mb-16">
             <span className={`transition-color duration-[2s] ${title.isVisible ? "text-white" : "text-orange-600"}`}>熱波パフォーマンス紹介</span>
           </h2>
           <div className="max-w-4xl mx-auto">
@@ -31,7 +31,7 @@ export default function PerformanceSection() {
             <div className="aspect-video bg-gray-200 rounded-lg md:mb-12">
               <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-lg">
                 <iframe
-                  src="https://www.youtube.com/embed/I97LDZ97h0s" // ←ここに実際のYouTube動画IDを入れてください
+                  src="https://www.youtube.com/embed/OWou7t5NmDE?rel=0" // ←ここに実際のYouTube動画IDを入れてください
                   title="熱波パフォーマンス動画"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -39,7 +39,6 @@ export default function PerformanceSection() {
                   className="w-full h-full"
                 ></iframe>
               </div>
-              <span className="text-2xl">ここは自分たちの実際の動画を挿入してください</span>
               {/* 動画プレイヤー */}
             </div>
           </div>

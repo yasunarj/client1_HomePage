@@ -5,11 +5,7 @@ import HeroSection from "./components/sections/HeroSection";
 import WhatIsNeppashiSection from "./components/sections/WhatIsNeppashiSection";
 import ProfileSection from "./components/sections/ProfileSection";
 import PerformanceSection from "./components/sections/PerformanceSection";
-import FAQSection from "./components/sections/FAQSection";
-import PricingSection from "./components/sections/PricingSection";
 import GallerySection from "./components/sections/GallerySection";
-import CollaborationSection from "./components/sections/CollaborationSection";
-import TrainingSection from "./components/sections/TrainingSection";
 import ScheduleSection from "./components/sections/ScheduleSection";
 import SocialSection from "./components/sections/SocialSection";
 import TestimonialsSection from "./components/sections/TestimonialsSection";
@@ -26,12 +22,8 @@ export default function Home() {
         <WhatIsNeppashiSection />
         <ProfileSection />
         <PerformanceSection />
-        <FAQSection />
-        <PricingSection />
-        <GallerySection />
-        <CollaborationSection />
-        <TrainingSection />
         <ScheduleSection />
+        <GallerySection />
         <SocialSection />
         <TestimonialsSection />
         <ContactSection />

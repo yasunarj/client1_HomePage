@@ -13,10 +13,10 @@ export default function WhatIsNeppashiSection() {
       <Container>
         <div className="max-w-5xl mx-auto overflow-hidden p-2">
           <div className="text-center mb-16">
-            <h2 ref={title.ref} className={`text-4xl font-bold mb-1 reveal-text ${ title.isVisible ? "revealed" : ""}`}>
+            <h2 ref={title.ref} className={`text-3xl sm:text-4xl font-bold mb-1 reveal-text ${ title.isVisible ? "revealed" : ""}`}>
               熱波師とは？
             </h2>
-            <div className="w-52 h-1 bg-gradient-to-r from-orange-300 to-red-600 mx-auto rounded-full translate-x-[-4px]"></div>
+            <div className="w-44 sm:w-52 h-1 bg-gradient-to-r from-orange-300 to-red-600 mx-auto rounded-full translate-x-[-4px]"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">

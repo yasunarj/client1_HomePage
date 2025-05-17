@@ -16,7 +16,7 @@ export default function SocialSection() {
     >
       <Container>
         <div className="absolute inset-0 bg-black/20 z-10"></div>
-        <h2 ref={title.ref} className="relative text-4xl font-bold text-center mb-16 z-10">
+        <h2 ref={title.ref} className="relative text-3xl sm:text-4xl font-bold text-center mb-16 z-10">
           <span className={`transition-color duration-[2s] ${title.isVisible ? "text-white" : "text-orange-600"}`}>SNS更新情報</span>
         </h2>
         <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 z-10">

@@ -18,7 +18,7 @@ export default function PricingSection() {
       <div className="absolute inset-0 bg-black/20 z-0"></div>
       <div className="relative z-10">
         <Container>
-          <h2 ref={title.ref} className="text-4xl font-bold text-center mb-16">
+          <h2 ref={title.ref} className="text-3xl sm:text-4xl font-bold text-center mb-16">
             <span className={`transition-color duration-[2s] ${title.isVisible ? "text-white" : "text-orange-600"}`}>料金プラン</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
