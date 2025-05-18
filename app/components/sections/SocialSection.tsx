@@ -46,13 +46,13 @@ export default function SocialSection() {
 
           {/* 個人用Instagram */}
           <div className="w-full max-w-lg mx-auto h-full min-h-[500px]">
-            <div className="flex flex-col bg-white rounded-xl shadow-lg overflow-hidden max-h-[500px] sm:max-h-[875px]">
+            <div className="flex flex-col bg-white rounded-xl shadow-lg overflow-hidden max-h-[660px] sm:max-h-[875px]">
               <div className="bg-gradient-to-r from-orange-500 to-red-600">
                 <h3 className="text-xl font-bold text-white text-center">
                   熱波師のSNS情報
                 </h3>
               </div>
-              <div className="p-4 overflow-auto touch-pan-y">
+              <div className="p-4 overflow-y-scroll">
                 <div className="grid grid-cols-1 gap-6">
                   {staffInstagramList.map((person, index) => (
                     <div
