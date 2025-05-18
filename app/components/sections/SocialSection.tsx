@@ -31,22 +31,22 @@ export default function SocialSection() {
         </h2>
         <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 z-10">
           {/* 会社用Instagram */}
-          <div className="w-full max-w-md sm:max-w-lg mx-auto">
-            <div className="flex flex-col bg-white rounded-xl overflow-hidden shadow-lg max-h-[720px] sm:min-h-[720px]">
+          <div className="w-full max-w-lg mx-auto">
+            <div className="flex flex-col bg-white rounded-xl overflow-hidden shadow-lg  max-h-[875px]">
               <div className="bg-gradient-to-r from-orange-500 to-red-600">
                 <h3 className="text-xl font-bold text-white text-center">
                     栃木サウナ熱波協会 Instagram
                 </h3>
               </div>
-              <div className="p-4 sm:min-h-[720px] overflow-auto touch-pan-y">
+              <div className="p-4">
                 <InstagramEmbed url={"https://www.instagram.com/p/DIG1tLUzoMv/?utm_source=ig_embed&amp;utm_campaign=loading"}/>
               </div>
             </div>
           </div>
 
           {/* 個人用Instagram */}
-          <div className="w-full max-w-md sm:max-w-lg mx-auto h-full min-h-[500px]">
-            <div className="flex flex-col bg-white rounded-xl shadow-lg overflow-hidden max-h-[720px]">
+          <div className="w-full max-w-lg mx-auto h-full min-h-[500px]">
+            <div className="flex flex-col bg-white rounded-xl shadow-lg overflow-hidden max-h-[875px]">
               <div className="bg-gradient-to-r from-orange-500 to-red-600">
                 <h3 className="text-xl font-bold text-white text-center">
                   熱波師のSNS情報
