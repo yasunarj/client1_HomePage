@@ -35,7 +35,7 @@ export default function SocialSection() {
             <div className="flex flex-col bg-white rounded-xl overflow-hidden shadow-lg max-h-[720px] sm:min-h-[720px]">
               <div className="bg-gradient-to-r from-orange-500 to-red-600">
                 <h3 className="text-xl font-bold text-white text-center">
-                  大田原熱波協会 Instagram
+                    栃木サウナ熱波協会 Instagram
                 </h3>
               </div>
               <div className="p-4 sm:min-h-[720px] overflow-auto touch-pan-y">

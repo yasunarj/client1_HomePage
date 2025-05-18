@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className={`mb-8 md:mb-0 ${shippori.className}`}>
-            <h3 className="text-2xl font-bold mb-4">大田原熱波協会</h3>
+            <h3 className="text-2xl font-bold mb-4">栃木サウナ熱波協会</h3>
             <p className="text-gray-400">心と体を癒す、究極のサウナ体験を提供します</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
@@ -67,7 +67,7 @@ export default function Footer() {
         </div> */}
 
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; 2024 大田原熱波協会 All Rights Reserved.</p>
+          <p>&copy; 2025 栃木サウナ熱波協会 All Rights Reserved.</p>
         </div>
       </div>
     </footer>

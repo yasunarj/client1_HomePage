@@ -14,7 +14,7 @@ export default function Header() {
             <div className="w-10 h-10 bg-orange-500 rounded-full mr-3 relative">
               <span className="absolute top-2 left-1 text-white">ロゴ</span>
             </div>
-            <span className={`text-xl font-bold ${shippori.className}`}>大田原熱波協会</span>
+            <span className={`text-xl font-bold ${shippori.className}`}>栃木サウナ熱波協会</span>
           </Link>
           {!isMenuOpen && (
             <button
