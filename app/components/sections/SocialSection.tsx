@@ -32,7 +32,7 @@ export default function SocialSection() {
         <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 z-10">
           {/* 会社用Instagram */}
           <div className="w-full max-w-lg mx-auto">
-            <div className="flex flex-col bg-white rounded-xl overflow-hidden shadow-lg  max-h-[875px]">
+            <div className="flex flex-col bg-white rounded-xl overflow-hidden shadow-lg max-h-[875px]">
               <div className="bg-gradient-to-r from-orange-500 to-red-600">
                 <h3 className="text-xl font-bold text-white text-center">
                     栃木サウナ熱波協会 Instagram
@@ -46,7 +46,7 @@ export default function SocialSection() {
 
           {/* 個人用Instagram */}
           <div className="w-full max-w-lg mx-auto h-full min-h-[500px]">
-            <div className="flex flex-col bg-white rounded-xl shadow-lg overflow-hidden max-h-[875px]">
+            <div className="flex flex-col bg-white rounded-xl shadow-lg overflow-hidden max-h-[500px] sm:max-h-[875px]">
               <div className="bg-gradient-to-r from-orange-500 to-red-600">
                 <h3 className="text-xl font-bold text-white text-center">
                   熱波師のSNS情報
