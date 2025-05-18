@@ -38,7 +38,7 @@ export default function SocialSection() {
                   大田原熱波協会 Instagram
                 </h3>
               </div>
-              <div className="p-4 sm:min-h-[720px] overflow-y-scroll">
+              <div className="p-4 sm:min-h-[720px] overflow-auto touch-pan-y">
                 <InstagramEmbed url={"https://www.instagram.com/p/DIG1tLUzoMv/?utm_source=ig_embed&amp;utm_campaign=loading"}/>
               </div>
             </div>
@@ -52,7 +52,7 @@ export default function SocialSection() {
                   熱波師のSNS情報
                 </h3>
               </div>
-              <div className="p-4 overflow-y-scroll">
+              <div className="p-4 overflow-auto touch-pan-y">
                 <div className="grid grid-cols-1 gap-6">
                   {staffInstagramList.map((person, index) => (
                     <div
