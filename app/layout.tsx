@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "大田原熱波協会",
+  title: "栃木サウナ熱波協会",
   description: "プロフェッショナルな熱波師があなたのサウナ体験を演出します",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };

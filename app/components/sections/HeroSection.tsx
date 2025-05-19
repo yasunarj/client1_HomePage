@@ -1,4 +1,3 @@
-import { shippori } from '@/app/lib/fonts';
 import Image from 'next/image';
 
 export default function HeroSection() {
@@ -14,7 +13,7 @@ export default function HeroSection() {
         quality={80}
       />
       <div className="absolute inset-0 bg-black/20"></div>
-      <div className={`${shippori.className} relative z-10 text-center text-white px-4`}>
+      <div className={`relative z-10 text-center text-white px-4`}>
         <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fadeInUp ">
           熱波の芸術
         </h1>
