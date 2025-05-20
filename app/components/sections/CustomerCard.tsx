@@ -16,7 +16,7 @@ const CustomerCard = ({ testimonial }: { testimonial: CustomerCardProps }) => {
         <div className="relative w-16 h-16 mr-4">
           <Image
             src={testimonial.src}
-            alt="お客様画像"
+            alt={`${testimonial.name}様のプロフィール写真(サウナ常連のお客様)`}
             fill
             className="object-cover rounded-full"
           />

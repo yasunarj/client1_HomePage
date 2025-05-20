@@ -35,7 +35,7 @@ export default function GallerySection() {
                     src={src}
                     fill
                     className="object-cover"
-                    alt="ギャラリー画像"
+                    alt="栃木のサウナで熱波師がタオルを振る様子"
                     loading="eager"
                     priority={index < 4}
                   />

@@ -5,7 +5,7 @@ export default function HeroSection() {
     <section className="relative h-[100dvh] flex items-center justify-center">
       <Image
         src="/images/gallery1.jpg"
-        alt="サウナの熱波"
+        alt="熱波師がサウナ室で風を送る様子（栃木サウナ熱波協会）"
         fill
         className="object-cover object-[65%_20%] sm:object-center"
         loading="eager"

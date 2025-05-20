@@ -37,7 +37,7 @@ export default function OwnerSection() {
           <div className="relative aspect-[3/4] w-full max-w-[280px] mx-auto">
             <Image
               src="/images/IMG_2959.png"
-              alt="代表取締役 熱波送郎"
+              alt="栃木サウナ熱波協会の代表熱波師・熱波送郎の写真"
               fill
               className="object-cover rounded-2xl shadow-xl"
               priority

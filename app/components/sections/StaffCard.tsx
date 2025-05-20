@@ -24,7 +24,7 @@ const StaffCard = ({ staff }: { staff: StaffCardProps }) => {
         <Image
           src={staff.src}
           fill
-          alt="スタッフ画像"
+          alt={`栃木サウナ熱波協会 所属熱波師 ${staff.name} (${staff.role})`}
           className="object-cover"
         />
       </div>
