@@ -10,17 +10,17 @@ export default function OwnerSection() {
 
   return (
     <section className="relative py-20 bg-gray-50">
-      <Container>
+      <Container className="overflow-y-hidden">
         <h2
           ref={title.ref}
-          className="text-3xl sm:text-4xl font-bold text-center mb-16"
+          className={`text-3xl sm:text-4xl font-bold text-center mb-16 reveal-text ${title.isVisible ? "revealed" : ""}`}
         >
           <span
-            className={`transition-all duration-1000 ${
-              title.isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-4"
-            }`}
+            // className={`transition-all duration-1000 ${
+            //   title.isVisible
+            //     ? "opacity-100 translate-y-0"
+            //     : "opacity-0 translate-y-4"
+            // }`}
           >
             栃木サウナ熱波協会 代表
           </span>
