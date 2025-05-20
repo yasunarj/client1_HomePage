@@ -1,6 +1,5 @@
 "use client";
 
-import Container from "../layout/Container";
 import { staffList } from "@/app/lib/staffList";
 import { useFadeInOnView } from "@/hooks/useFadeInOnView";
 import StaffCard from "./StaffCard";
