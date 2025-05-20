@@ -1,4 +1,5 @@
 import { shippori } from "@/app/lib/fonts";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -29,45 +30,19 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* 協力会社セクション */}
-        {/* <div className="mt-12 pt-8 border-t border-gray-800">
-          <h4 className="text-lg font-bold text-center mb-6">Special Thanks to</h4>
-          <div className="flex flex-wrap justify-center gap-8">
-            <a
-              href="https://www.taiyounoyu.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group"
-            >
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-2 bg-orange-500 rounded-full flex items-center justify-center group-hover:bg-orange-600 transition-colors">
-                  <span className="text-2xl">🌞</span>
-                </div>
-                <span className="text-gray-300 group-hover:text-orange-500 transition-colors">
-                  太陽の湯
-                </span>
-              </div>
-            </a>
-            <a
-              href="https://www.yasuraginoyu.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group"
-            >
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-2 bg-orange-500 rounded-full flex items-center justify-center group-hover:bg-orange-600 transition-colors">
-                  <span className="text-2xl">♨️</span>
-                </div>
-                <span className="text-gray-300 group-hover:text-orange-500 transition-colors">
-                  安らぎの湯
-                </span>
-              </div>
-            </a>
+        <div className="mt-8 pt-8 border-t border-gray-800">
+          <div className="flex flex-wrap justify-center gap-6 mb-4">
+            <Link href="/company" className="text-gray-400 hover:text-orange-500 transition-colors">
+              会社概要
+            </Link>
+            <Link href="/privacy" className="text-gray-400 hover:text-orange-500 transition-colors">
+              プライバシーポリシー
+            </Link>
+            <Link href="/terms" className="text-gray-400 hover:text-orange-500 transition-colors">
+              利用規約
+            </Link>
           </div>
-        </div> */}
-
-        <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; 2025 栃木サウナ熱波協会 All Rights Reserved.</p>
+          <p className="text-center text-gray-400">&copy; 2025 栃木サウナ熱波協会 All Rights Reserved.</p>
         </div>
       </div>
     </footer>
