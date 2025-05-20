@@ -9,21 +9,16 @@ export default function OwnerSection() {
   const content = useFadeInOnView(0);
 
   return (
+    // <section className="relative py-20 bg-gray-50 bg-gradient-to-r from-orange-800 to-yellow-200">
     <section className="relative py-20 bg-gray-50">
       <Container className="overflow-y-hidden">
         <h2
           ref={title.ref}
-          className={`text-3xl sm:text-4xl font-bold text-center mb-16 reveal-text ${title.isVisible ? "revealed" : ""}`}
+          className={`text-3xl sm:text-4xl font-bold text-center mb-16 reveal-text ${
+            title.isVisible ? "revealed" : ""
+          }`}
         >
-          <span
-            // className={`transition-all duration-1000 ${
-            //   title.isVisible
-            //     ? "opacity-100 translate-y-0"
-            //     : "opacity-0 translate-y-4"
-            // }`}
-          >
-            栃木サウナ熱波協会 代表
-          </span>
+          <span>栃木サウナ熱波協会 代表</span>
         </h2>
         <div
           ref={content.ref}
@@ -46,9 +41,7 @@ export default function OwnerSection() {
           </div>
 
           {/* メッセージ */}
-          <div
-            className={`text-center md:text-left flex flex-col`}
-          >
+          <div className={`text-center md:text-left flex flex-col`}>
             <div>
               <h3 className={`text-2xl md:text-4xl font-bold mb-4 md:mb-4`}>
                 人を愛し、サウナを愛する漢
