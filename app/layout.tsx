@@ -61,7 +61,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen overflow-hidden`}
       >
         <ScrollToTopOnRouteChange />
-        <div className="flex flex-col overflow-y-auto">{children}</div>
+        <div className="flex flex-col h-full overflow-y-auto">{children}</div>
       </body>
     </html>
   );
