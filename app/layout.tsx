@@ -17,7 +17,14 @@ export const metadata: Metadata = {
   title: "栃木サウナ熱波協会",
   description: "プロフェッショナルな熱波師があなたのサウナ体験を演出します",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1",
-  keywords: ["サウナ", "熱波師", "栃木", "出張サウナ", "サウナイベント", "栃木サウナ熱波協会",],
+  keywords: [
+    "サウナ",
+    "熱波師",
+    "栃木",
+    "出張サウナ",
+    "サウナイベント",
+    "栃木サウナ熱波協会",
+  ],
   openGraph: {
     title: "栃木サウナ熱波協会",
     description: "プロの熱波師による最高のサウナ体験をあなたに",
@@ -39,8 +46,8 @@ export const metadata: Metadata = {
     title: "栃木サウナ熱波協会",
     description: "サウナイベント・出張熱波なら栃木サウナ熱波協会へ。",
     // site: "@tochigi_sauna",
-    images: ["https://client1-home-page.vercel.app/images/gallery1.jpg"]
-  }
+    images: ["https://client1-home-page.vercel.app/images/gallery1.jpg"],
+  },
 };
 
 export default function RootLayout({
@@ -51,10 +58,10 @@ export default function RootLayout({
   return (
     <html lang="ja" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen overflow-hidden`}
       >
         <ScrollToTopOnRouteChange />
-        {children}
+        <div className="flex flex-col overflow-y-auto">{children}</div>
       </body>
     </html>
   );
