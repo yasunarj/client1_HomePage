@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function HeroSection() {
   const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false);
   return (
-    <section className="relative h-[100dvh] flex items-center justify-center">
+    <section className="relative h-[100dvh] flex items-center justify-center bg-white">
       <Image
         src="/images/gallery1.jpg"
         alt="熱波師がサウナ室で風を送る様子（栃木サウナ熱波協会）"
@@ -16,6 +16,7 @@ export default function HeroSection() {
         loading="eager"
         priority
         quality={80}
+        placeholder="blur"
         onLoadingComplete={() => setIsImageLoaded(true)}
       />
       <div className="absolute inset-0 bg-black/20"></div>
