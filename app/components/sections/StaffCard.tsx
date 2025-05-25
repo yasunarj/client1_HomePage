@@ -9,7 +9,6 @@ interface StaffCardProps {
 }
 
 const StaffCard = ({ staff }: { staff: StaffCardProps }) => {
-  console.log(staff);
   const fade = useFadeInOnView();
   return (
     <div
