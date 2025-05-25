@@ -9,8 +9,8 @@ export default function HeroSection() {
   return (
     <motion.div
       className="relative h-[100dvh] flex items-center justify-center bg-white"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: isImageLoaded ? 1 : 0 }}
+      initial={{ opacity: 0, filter: "brightness(0.5)" }}
+      animate={{ opacity: isImageLoaded ? 1 : 0, filter: "brightness(1)" }}
       transition={{ duration: 2 }}
     >
       <Image
