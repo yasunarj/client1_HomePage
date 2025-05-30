@@ -56,12 +56,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className="scroll-smooth">
+    <html lang="ja">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen overflow-hidden`}
       >
         <ScrollToTopOnRouteChange />
-        <div className="flex flex-col h-full overflow-y-auto">{children}</div>
+        <div id="scrollable-container" className="flex flex-col h-full overflow-y-auto">{children}</div>
       </body>
     </html>
   );

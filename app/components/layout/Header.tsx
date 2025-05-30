@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { shippori } from "@/app/lib/fonts";
+import { headerNavList } from "@/app/lib/headerNavList";
+import { scrollElementIn } from "@/app/lib/scrollElementIn";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +16,9 @@ export default function Header() {
             <div className="w-10 h-10 bg-orange-500 rounded-full mr-3 relative">
               <span className="absolute top-2 left-1 text-white">ロゴ</span>
             </div>
-            <span className={`text-xl font-bold ${shippori.className}`}>栃木サウナ熱波協会</span>
+            <span className={`text-xl font-bold ${shippori.className}`}>
+              栃木サウナ熱波協会
+            </span>
           </Link>
           {!isMenuOpen && (
             <button
@@ -29,34 +33,18 @@ export default function Header() {
             </button>
           )}
           <nav className="hidden md:flex space-x-8">
-            <Link
-              href="#profile"
-              className="group relative hover:text-orange-500 transition-color"
-            >
-              プロフィール
-              <span className="absolute left-0 bottom-[1px] w-full h-[1px] bg-red-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
-            </Link>
-            <Link
-              href="#services"
-              className="group relative hover:text-orange-500 transition-colors"
-            >
-              サービス
-              <span className="absolute left-0 bottom-[1px] w-full h-[1px] bg-red-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
-            </Link>
-            <Link
-              href="#schedule"
-              className="group relative hover:text-orange-500 transition-colors"
-            >
-              スケジュール
-              <span className="absolute left-0 bottom-[1px] w-full h-[1px] bg-red-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
-            </Link>
-            <Link
-              href="#contact"
-              className="group relative hover:text-orange-500 transition-colors"
-            >
-              お問い合わせ
-              <span className="absolute left-0 bottom-[1px] w-full h-[1px] bg-red-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
-            </Link>
+            {headerNavList.map((list) => {
+              return (
+                <button
+                  key={list.id}
+                  className="group relative hover:text-orange-500 transition-color"
+                  onClick={() => scrollElementIn(list.id)}
+                >
+                  {list.list}
+                  <span className="absolute left-0 bottom-[1px] w-full h-[1px] bg-red-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left "></span>
+                </button>
+              );
+            })}
           </nav>
         </div>
         {/* モバイルメニュー */}
@@ -77,7 +65,9 @@ export default function Header() {
                     </span>
                   </div>
                 </div>
-                <span className={`text-xl font-bold ${shippori.className}`}>大田原熱波協会</span>
+                <span className={`text-xl font-bold ${shippori.className}`}>
+                  大田原熱波協会
+                </span>
               </Link>
               <button
                 className="p-2 rounded-lg hover:bg-gray-100 z-50 relative w-8 h-8"
@@ -90,38 +80,53 @@ export default function Header() {
               </button>
             </div>
             <nav className="flex flex-col gap-4 items-end">
-            <Link
-              href="#profile"
-              className="group relative hover:text-orange-500 transition-color text-lg"
-              onClick={() => setIsMenuOpen(prev => !prev)}
-            >
-              プロフィール
-              <span className="absolute left-0 bottom-[1px] w-full h-[1px] bg-red-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
-            </Link>
-            <Link
-              href="#services"
-              className="group relative hover:text-orange-500 transition-colors text-lg"
-              onClick={() => setIsMenuOpen(prev => !prev)}
-            >
-              サービス
-              <span className="absolute left-0 bottom-[1px] w-full h-[1px] bg-red-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
-            </Link>
-            <Link
-              href="#schedule"
-              className="group relative hover:text-orange-500 transition-colors text-lg"
-              onClick={() => setIsMenuOpen(prev => !prev)}
-            >
-              スケジュール
-              <span className="absolute left-0 bottom-[1px] w-full h-[1px] bg-red-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
-            </Link>
-            <Link
-              href="#contact"
-              className="group relative hover:text-orange-500 transition-colors text-lg"
-              onClick={() => setIsMenuOpen(prev => !prev)}
-            >
-              お問い合わせ
-              <span className="absolute left-0 bottom-[1px] w-full h-[1px] bg-red-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
-            </Link>
+              {headerNavList.map((list) => {
+                return (
+                  <button
+                    key={list.id}
+                    className="group relative hover:text-orange-500 transition-color text-lg"
+                    onClick={() => {
+                      setIsMenuOpen((prev) => !prev);
+                      scrollElementIn(list.id);
+                    }}
+                  >
+                    {list.list}
+                    <span className="absolute left-0 bottom-[1px] w-full h-[1px] bg-red-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+                  </button>
+                );
+              })}
+              {/* <Link
+                href="#profile"
+                className="group relative hover:text-orange-500 transition-color text-lg"
+                onClick={() => setIsMenuOpen((prev) => !prev)}
+              >
+                プロフィール
+                <span className="absolute left-0 bottom-[1px] w-full h-[1px] bg-red-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+              </Link>
+              <Link
+                href="#services"
+                className="group relative hover:text-orange-500 transition-colors text-lg"
+                onClick={() => setIsMenuOpen((prev) => !prev)}
+              >
+                サービス
+                <span className="absolute left-0 bottom-[1px] w-full h-[1px] bg-red-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+              </Link>
+              <Link
+                href="#schedule"
+                className="group relative hover:text-orange-500 transition-colors text-lg"
+                onClick={() => setIsMenuOpen((prev) => !prev)}
+              >
+                スケジュール
+                <span className="absolute left-0 bottom-[1px] w-full h-[1px] bg-red-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+              </Link>
+              <Link
+                href="#contact"
+                className="group relative hover:text-orange-500 transition-colors text-lg"
+                onClick={() => setIsMenuOpen((prev) => !prev)}
+              >
+                お問い合わせ
+                <span className="absolute left-0 bottom-[1px] w-full h-[1px] bg-red-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+              </Link> */}
             </nav>
           </div>
         </div>

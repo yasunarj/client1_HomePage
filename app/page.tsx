@@ -1,4 +1,3 @@
-import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import ClientSplashWrapper from "./components/splash/ClientSplashWrapper";
 import HeroSection from "./components/sections/HeroSection";
@@ -14,6 +13,7 @@ import SpecialThanks from "./components/sections/SpecialThanks";
 import ContactSection from "./components/sections/ContactSection";
 import ScrollToTop from "./components/scroll/ScrollToTop";
 import FadeInMain from "./components/sections/fadeIn/FadeInMain";
+import Header from "./components/layout/Header";
 
 export default function Home() {
   return (

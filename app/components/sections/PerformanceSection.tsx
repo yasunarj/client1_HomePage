@@ -9,7 +9,7 @@ export default function PerformanceSection() {
   const title = useFadeInOnView();
   return (
     <section
-      id="services"
+      id="service"
       className="relative py-20 bg-gray-50 bg-cover bg-center"
       style={{
         backgroundImage:
