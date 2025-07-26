@@ -11,10 +11,10 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-20 shadow-sm select-none">
-      <div className="w-full md:container mx-auto px-4 py-4">
+      <div className="w-full md:container mx-auto px-4 py-3">
         <div className={`flex justify-between items-center `}>
           <Link href="/" className="flex items-center">
-            <div className="w-10 h-10 rounded-full mr-1 relative animate-fadeIn">
+            <div className="w-12 h-12 rounded-full mr-1 relative animate-fadeIn">
               <Image
                 src={"/images/header_logo_transparent.png"}
                 fill
