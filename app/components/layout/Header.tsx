@@ -14,12 +14,13 @@ export default function Header() {
       <div className="w-full md:container mx-auto px-4 py-4">
         <div className={`flex justify-between items-center `}>
           <Link href="/" className="flex items-center">
-            <div className="w-10 h-10 bg-orange-500 rounded-full mr-1 relative">
+            <div className="w-10 h-10 bg-orange-500 rounded-full mr-1 relative animate-fadeIn">
               <Image
                 src={"/images/火と風のエレメント.png"}
                 fill
                 alt={"栃木サウナ熱波協会の会社のロゴ"}
                 className="object-cover"
+                priority
               />
               {/* <span className="absolute top-2 left-1 text-white">ロゴ</span> */}
             </div>
