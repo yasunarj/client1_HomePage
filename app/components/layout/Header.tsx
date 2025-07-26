@@ -5,18 +5,25 @@ import Link from "next/link";
 import { shippori } from "@/app/lib/fonts";
 import { headerNavList } from "@/app/lib/headerNavList";
 import { scrollElementIn } from "@/app/lib/scrollElementIn";
+import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-20 shadow-sm select-none">
       <div className="w-full md:container mx-auto px-4 py-4">
-        <div className={`flex justify-between items-center`}>
+        <div className={`flex justify-between items-center `}>
           <Link href="/" className="flex items-center">
-            <div className="w-10 h-10 bg-orange-500 rounded-full mr-3 relative">
-              <span className="absolute top-2 left-1 text-white">ロゴ</span>
+            <div className="w-10 h-10 bg-orange-500 rounded-full mr-1 relative">
+              <Image
+                src={"/images/火と風のエレメント.png"}
+                fill
+                alt={"栃木サウナ熱波協会の会社のロゴ"}
+                className="object-cover"
+              />
+              {/* <span className="absolute top-2 left-1 text-white">ロゴ</span> */}
             </div>
-            <span className={`text-xl font-bold ${shippori.className}`}>
+            <span className={`text-xl font-bold ${shippori.className} pb-0.5`}>
               栃木サウナ熱波協会
             </span>
           </Link>

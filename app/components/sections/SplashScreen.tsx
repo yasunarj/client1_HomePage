@@ -1,4 +1,5 @@
 import { shippori } from "@/app/lib/fonts";
+import Image from "next/image";
 
 interface SplashScreenProps {
   isFading: boolean;
@@ -6,7 +7,18 @@ interface SplashScreenProps {
 
 export default function SplashScreen({ isFading }: SplashScreenProps) {
   return (
-    <div className={`fixed inset-0 flex items-center justify-center bg-gradient-to-br from-orange-600 to-red-700 overflow-hidden transition-opacity duration-1000 ${isFading ? 'opacity-0' : 'opacity-100'}`}>
+    <div className={`fixed inset-0 flex items-center justify-center bg-gradient-to-br from-orange-500 to-red-700 overflow-hidden transition-opacity duration-1000 ${isFading ? 'opacity-0' : 'opacity-100'}`}>
+
+      <div className="absolute inset-0 opacity-50 flex items-center">
+        <Image 
+          src={"/images/炎のロゴのグラデーションデザイン.png"}
+          alt="栃木サウナ熱波協会の会社のロゴ"
+          width={1200}
+          height={1200}
+          className="mx-auto object-contain"
+        />
+      </div>
+
       <div className="absolute inset-0 opacity-30">
         <div className="absolute inset-0 bg-[url('/steam.png')] bg-repeat-x animate-float"></div>
       </div>
