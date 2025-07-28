@@ -1,3 +1,5 @@
+export const revalidate = 60 * 60;
+
 import Container from "../layout/Container";
 import { Client } from "@notionhq/client";
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
