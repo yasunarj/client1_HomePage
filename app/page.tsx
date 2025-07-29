@@ -17,23 +17,25 @@ import Header from "./components/layout/Header";
 
 export default function Home() {
   return (
-    <ClientSplashWrapper>
-      <FadeInMain>
-        <Header />
-        <HeroSection />
-        <WhatIsNeppashiSection />
-        <OwnerSection />
-        <ProfileSection />
-        <PerformanceSection />
-        <ScheduleSection />
-        <GallerySection />
-        <SocialSection />
-        <TestimonialsSection />
-        <SpecialThanks />
-        <ContactSection />
-        <ScrollToTop />
-        <Footer />
-      </FadeInMain>
-    </ClientSplashWrapper>
+    <>
+      <ScheduleSection />
+      <ClientSplashWrapper>
+        <FadeInMain>
+          <Header />
+          <HeroSection />
+          <WhatIsNeppashiSection />
+          <OwnerSection />
+          <ProfileSection />
+          <PerformanceSection />
+          <GallerySection />
+          <SocialSection />
+          <TestimonialsSection />
+          <SpecialThanks />
+          <ContactSection />
+          <ScrollToTop />
+          <Footer />
+        </FadeInMain>
+      </ClientSplashWrapper>
+    </>
   );
 }
