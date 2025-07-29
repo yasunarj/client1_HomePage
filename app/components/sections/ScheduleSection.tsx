@@ -1,4 +1,4 @@
-export const revalidate = 60 * 60;
+export const revalidate = 60;
 
 import Container from "../layout/Container";
 import { Client } from "@notionhq/client";
