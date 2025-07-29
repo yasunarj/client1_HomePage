@@ -17,8 +17,6 @@ import Header from "./components/layout/Header";
 
 export default function Home() {
   return (
-    <>
-      <ScheduleSection />
       <ClientSplashWrapper>
         <FadeInMain>
           <Header />
@@ -28,6 +26,7 @@ export default function Home() {
           <ProfileSection />
           <PerformanceSection />
           <GallerySection />
+          <ScheduleSection />
           <SocialSection />
           <TestimonialsSection />
           <SpecialThanks />
@@ -36,6 +35,5 @@ export default function Home() {
           <Footer />
         </FadeInMain>
       </ClientSplashWrapper>
-    </>
   );
 }
