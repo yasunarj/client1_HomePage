@@ -74,7 +74,7 @@ export default function Header() {
                   </div>
                 </div>
                 <span className={`text-xl font-bold ${shippori.className}`}>
-                  大田原熱波協会
+                  栃木サウナ熱波協会
                 </span>
               </Link>
               <button
