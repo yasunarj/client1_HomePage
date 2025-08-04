@@ -29,15 +29,15 @@ export default function OwnerSection() {
           }`}
         >
           {/* 代表者写真 */}
-          <div className="relative aspect-[3/4] w-full max-w-[280px] mx-auto">
+          <div className="relative aspect-[3/4] w-full max-w-[300px] mx-auto">
             <Image
-              src="/images/IMG_2959.png"
+              src="/images/atunamiokurou.JPG"
               alt="栃木サウナ熱波協会の代表熱波師・熱波送郎の写真"
               fill
-              className="object-cover rounded-2xl shadow-xl"
+              className="object-cover object-[70%_center]"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
           </div>
 
           {/* メッセージ */}

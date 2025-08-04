@@ -17,7 +17,7 @@ const StaffCard = ({ staff }: { staff: StaffCardProps }) => {
           fade.isVisible ? "opacity-100" : "opacity-0"}`}
     >
       <div
-        className="w-48 h-48 mx-auto mb-4 relative rounded-full overflow-hidden  
+        className="w-48 h-52 mx-auto mb-4 relative rounded-2xl overflow-hidden  
         "
       >
         <Image
