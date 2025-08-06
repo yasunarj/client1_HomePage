@@ -38,8 +38,8 @@ const ScheduleCard = ({ schedule }: { schedule: ScheduleCardProps }) => {
       <div className="flex items-center">
         <div className="w-32 text-orange-500 font-bold">{dateOnly}</div>
         <div className={timeOnly2 ? `flex flex-row sm:flex-col` : ""}>
-          <div className="w-20 text-orange-500 font-bold">{timeOnly}</div>
-          <div className={timeOnly2 ? "w-20 text-orange-500 font-bold" : ""}>{timeOnly2}</div>
+          <div className="w-[68px] text-orange-500 font-bold">{timeOnly}</div>
+          <div className={timeOnly2 ? "w-[68px] text-orange-500 font-bold" : ""}>{timeOnly2}</div>
         </div>
       </div>
 
