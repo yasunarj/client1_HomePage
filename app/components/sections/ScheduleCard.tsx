@@ -15,7 +15,7 @@ const ScheduleCard = ({ schedule }: { schedule: ScheduleCardProps }) => {
   const formattedTime = schedule.date
     ? format(parseISO(schedule.date), "H:mm")
     : "時間なし";
-  const timeOnly = formattedTime === "0:00" ? "未定" : `${formattedTime}〜`;
+  const timeOnly = formattedTime === "0:00" ? "未定" : `${formattedTime}時`;
 
   const fade = useFadeInOnView();
   return (
