@@ -1,5 +1,6 @@
 "use client";
 import { useFadeInOnView } from "@/hooks/useFadeInOnView";
+import { format, parseISO } from "date-fns";
 
 interface ScheduleCardProps {
   date: string;
@@ -8,6 +9,14 @@ interface ScheduleCardProps {
 }
 
 const ScheduleCard = ({ schedule }: { schedule: ScheduleCardProps }) => {
+  const dateOnly = schedule.date
+    ? format(parseISO(schedule.date), "yyyy年M月d日")
+    : "日付なし";
+  const formattedTime = schedule.date
+    ? format(parseISO(schedule.date), "H:mm")
+    : "時間なし";
+  const timeOnly = formattedTime === "0:00" ? "未定" : `${formattedTime}〜`;
+
   const fade = useFadeInOnView();
   return (
     <div
@@ -16,7 +25,10 @@ const ScheduleCard = ({ schedule }: { schedule: ScheduleCardProps }) => {
         fade.isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="w-36 text-orange-500 font-bold">{schedule.date}</div>
+      <div className="flex">
+        <div className="w-32 text-orange-500 font-bold">{dateOnly}</div>
+        <div className="w-20 text-orange-500 font-bold">{timeOnly}</div>
+      </div>
 
       <div className="flex-1">
         <div className="font-bold">{schedule.title}</div>
