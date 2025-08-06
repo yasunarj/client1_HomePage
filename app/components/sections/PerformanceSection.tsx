@@ -31,7 +31,8 @@ export default function PerformanceSection() {
             <div className="aspect-video bg-gray-200 rounded-lg md:mb-12">
               <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-lg">
                 <iframe
-                  src="https://www.youtube.com/embed/OWou7t5NmDE?rel=0" // ←ここに実際のYouTube動画IDを入れてください
+                  // src="https://www.youtube.com/embed/OWou7t5NmDE?rel=0" 
+                  src="https://www.youtube.com/embed/-M3AcJQhIcM?rel=0"
                   title="熱波パフォーマンス動画"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
