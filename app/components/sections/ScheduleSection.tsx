@@ -9,6 +9,7 @@ interface ScheduleItem {
   title: string;
   date: string;
   place: string;
+  time2: string | null;
 }
 
 const parseSchedulePage = (page: PageObjectResponse): ScheduleItem => {
@@ -29,7 +30,10 @@ const parseSchedulePage = (page: PageObjectResponse): ScheduleItem => {
       ? props["場所"].rich_text[0]?.plain_text ?? "場所未設定"
       : "場所未設定";
 
-  return { title, date, place };
+  const time2 = 
+    "時間２" in props && props["時間２"].type === "date" ? props["時間２"].date?.start ?? null : null;
+
+  return { title, date, place, time2 };
 };
 
 export default async function ScheduleSection() {
