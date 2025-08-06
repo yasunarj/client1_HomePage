@@ -16,7 +16,7 @@ const ScheduleCard = ({ schedule }: { schedule: ScheduleCardProps }) => {
   const formattedTime = schedule.date
     ? format(parseISO(schedule.date), "H:mm")
     : "時間なし";
-  const timeOnly = formattedTime === "0:00" ? "未定" : `${formattedTime}時`;
+  const timeOnly = formattedTime === "0:00" ? "時間未定" : `${formattedTime}時`;
 
   const formattedTime2 = schedule.time2
     ? format(parseISO(schedule.time2), "H:mm")
@@ -35,7 +35,7 @@ const ScheduleCard = ({ schedule }: { schedule: ScheduleCardProps }) => {
         fade.isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="flex">
+      <div className="flex items-center">
         <div className="w-32 text-orange-500 font-bold">{dateOnly}</div>
         <div className={timeOnly2 ? `flex flex-row sm:flex-col` : ""}>
           <div className="w-20 text-orange-500 font-bold">{timeOnly}</div>
