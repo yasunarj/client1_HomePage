@@ -9,21 +9,14 @@ const ClientSplashWrapper = ({ children }: { children: ReactNode }) => {
   const [isFading, setIsFading] = useState<boolean>(false);
 
   useEffect(() => {
-    const html = document.documentElement;
-    const id1 = requestAnimationFrame(() => {
-      html.classList.add("ios-paint-ready");
-    });
-
-    const t1 = setTimeout(() => {
-      setIsFading(true);
-      const t2 = setTimeout(() => setShowMain(true), 1000);
-      return () => clearTimeout(t2);
+    const timer = setTimeout(() => {
+      setIsFading(true); 
+      setTimeout(() => {
+        setShowMain(true);
+      }, 1000);
     }, 3000);
 
-    return () => {
-      cancelAnimationFrame(id1);
-      clearTimeout(t1);
-    };
+    return () => clearTimeout(timer);
   }, []);
 
   if (!showMain) {
@@ -34,12 +27,3 @@ const ClientSplashWrapper = ({ children }: { children: ReactNode }) => {
 };
 
 export default ClientSplashWrapper;
-
-  // const timer = setTimeout(() => {
-  //   setIsFading(true);
-  //   setTimeout(() => {
-  //     setShowMain(true);
-  //   }, 1000);
-  // }, 3000);
-
-  // return () => clearTimeout(timer);

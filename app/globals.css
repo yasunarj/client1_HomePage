@@ -3,7 +3,6 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  color-scheme: light dark;
 }
 
 @theme inline {
@@ -77,34 +76,4 @@ body {
 
 .reveal-text.revealed {
   background-size: 100% 100%;
-}
-
-/* --- iOS Safari 合成の安定化 --------------------- */
-.splash-root {
-  /* 合成を安定させる（親opacityアニメ時の色ズレを抑制） */
-  will-change: opacity;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  isolation: isolate; /* スタッキングコンテキストを切る */
-}
-
-/* 初期は無地 → 次フレームでグラデに切替（ClientSplashWrapperが .ios-paint-ready を付与） */
-.bg-splash-initial {
-  background: #e55a1c; /* 近い単色（from-orange-500 相当） */
-}
-.ios-paint-ready .splash-root.bg-splash-initial {
-  background-image: linear-gradient(
-    to bottom right,
-    #f97316,
-    #b91c1c
-  ); /* from-orange-500 to-red-700 */
-  background-color: transparent;
-}
-
-/* 念のため、iOS ではフィルタを完全無効（万一どこかでfilterが乗っても影響させない） */
-@supports (-webkit-touch-callout: none) {
-  .splash-root {
-    -webkit-filter: none !important;
-    filter: none !important;
-  }
 }
