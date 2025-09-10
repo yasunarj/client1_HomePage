@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="">
           <div className={`mb-8 md:mb-0 ${shippori.className}`}>
-            <p className="md:text-xl font-bold mb-4 sm:text-center ">栃木サウナ熱波協会代表 熱波送郎のInstagramへDMをお願いします。</p>
+            <p className="text-lg md:text-xl font-bold mb-4 sm:text-center ">栃木サウナ熱波協会代表 熱波送郎のInstagramへDMをお願いします。</p>
             {/* <p className="text-gray-400">
               心と体を癒す、究極のサウナ体験を提供します
             </p> */}
