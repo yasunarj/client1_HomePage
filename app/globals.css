@@ -79,38 +79,32 @@ body {
   background-size: 100% 100%;
 }
 
-/* 背景は固定。最初は無地色→次フレでグラデに昇格 */
+/* --- iOS Safari 合成の安定化 --------------------- */
 .splash-root {
-  isolation: isolate; /* 合成安定化 */
+  /* 合成を安定させる（親opacityアニメ時の色ズレを抑制） */
+  will-change: opacity;
   backface-visibility: hidden;
   transform: translateZ(0);
-}
-.splash-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: #f97316; /* from-orange-500 相当の無地 */
-}
-.splash-bg.is-ready {
-  /* 次フレームでグラデを適用（iOS初期フレームの不具合を回避） */
-  background-image: linear-gradient(to bottom right, #f97316, #b91c1c);
+  isolation: isolate; /* スタッキングコンテキストを切る */
 }
 
-/* コンテンツ側のみフェード */
-.splash-content {
-  position: relative;
-  z-index: 1;
-  will-change: opacity;
-  transition: opacity 1000ms ease;
+/* 初期は無地 → 次フレームでグラデに切替（ClientSplashWrapperが .ios-paint-ready を付与） */
+.bg-splash-initial {
+  background: #e55a1c; /* 近い単色（from-orange-500 相当） */
+}
+.ios-paint-ready .splash-root.bg-splash-initial {
+  background-image: linear-gradient(
+    to bottom right,
+    #f97316,
+    #b91c1c
+  ); /* from-orange-500 to-red-700 */
+  background-color: transparent;
 }
 
-/* 念のため iOSで filter を完全拒否（予期せぬ減彩を抑える） */
+/* 念のため、iOS ではフィルタを完全無効（万一どこかでfilterが乗っても影響させない） */
 @supports (-webkit-touch-callout: none) {
-  .splash-root,
-  .splash-content {
+  .splash-root {
     -webkit-filter: none !important;
     filter: none !important;
   }
 }
-
-/* すでにある .animate-float などはそのままでOK */
