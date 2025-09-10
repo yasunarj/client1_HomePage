@@ -48,7 +48,7 @@ const ClientSplashWrapper = ({ children }: { children: ReactNode }) => {
   // → 白黒が100%消えるなら「スプラッシュ×iOS Chromeの初期描画」が犯人と確定
   if (isIosChrome()) {
     // 必要ならコメントアウトして「バイパスなし」でも挙動比較を
-    // return <div className={shippori.className}>{children}</div>;
+    return <div className={shippori.className}>{children}</div>;
   }
 
   if (!showMain) return <SplashScreen isFading={isFading} ready={ready} showSteam={showSteam} />;
