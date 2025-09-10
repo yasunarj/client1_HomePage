@@ -5,8 +5,8 @@ import SplashScreen from "../sections/SplashScreen";
 import { shippori } from "@/app/lib/fonts";
 
 const ClientSplashWrapper = ({ children }: { children: ReactNode }) => {
-  const [showMain, setShowMain] = useState<boolean>(false);
-  const [isFading, setIsFading] = useState<boolean>(false);
+  const [showMain, setShowMain] = useState<boolean>(true);
+  const [isFading, setIsFading] = useState<boolean>(true);
 
   useEffect(() => {
     const html = document.documentElement;
