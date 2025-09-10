@@ -7,10 +7,10 @@ import ProfileSection from "./components/sections/ProfileSection";
 import PerformanceSection from "./components/sections/PerformanceSection";
 import GallerySection from "./components/sections/GallerySection";
 import ScheduleSection from "./components/sections/ScheduleSection";
-import SocialSection from "./components/sections/SocialSection";
+// import SocialSection from "./components/sections/SocialSection";
 import TestimonialsSection from "./components/sections/TestimonialsSection";
 import SpecialThanks from "./components/sections/SpecialThanks";
-import ContactSection from "./components/sections/ContactSection";
+// import ContactSection from "./components/sections/ContactSection";
 import ScrollToTop from "./components/scroll/ScrollToTop";
 import FadeInMain from "./components/sections/fadeIn/FadeInMain";
 import Header from "./components/layout/Header";
@@ -27,10 +27,10 @@ export default function Home() {
           <PerformanceSection />
           <GallerySection />
           <ScheduleSection />
-          <SocialSection />
-          <TestimonialsSection />
+          {/* <SocialSection /> */}
           <SpecialThanks />
-          <ContactSection />
+          <TestimonialsSection />
+          {/* <ContactSection /> */}
           <ScrollToTop />
           <Footer />
         </FadeInMain>

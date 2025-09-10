@@ -1,8 +1,8 @@
 "use client";
 
-import { stepList } from "@/app/lib/stepList";
+// import { stepList } from "@/app/lib/stepList";
 import Container from "../layout/Container";
-import StepCard from "./StepCard";
+// import StepCard from "./StepCard";
 import { useFadeInOnView } from "@/hooks/useFadeInOnView";
 
 export default function PerformanceSection() {
@@ -20,14 +20,14 @@ export default function PerformanceSection() {
       <div className="relative z-10">
         <Container>
           <h2 ref={title.ref} className="text-3xl sm:text-4xl font-bold text-center mb-16">
-            <span className={`transition-color duration-[2s] ${title.isVisible ? "text-white" : "text-orange-600"}`}>熱波パフォーマンス紹介</span>
+            <span className={`transition-color duration-[2s] ${title.isVisible ? "text-white" : "text-orange-600"}`}>熱波パフォーマンス動画紹介</span>
           </h2>
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {stepList.map((step, index) => (
                 <StepCard key={index} step={step} />
               ))}
-            </div>
+            </div> */}
             <div className="aspect-video bg-gray-200 rounded-lg md:mb-12">
               <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-lg">
                 <iframe

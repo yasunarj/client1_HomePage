@@ -50,7 +50,7 @@ export default function OwnerSection() {
             <div
               className={`flex items-end justify-center md:justify-start gap-6 md:gap-12`}
             >
-              <p className="text-lg md:text-xl text-orange-600">代表熱波師</p>
+              <p className="text-lg md:text-xl text-red-700">代表熱波師</p>
               <h3 className="text-2xl md:text-3xl font-bold">熱波送郎</h3>
             </div>
             <div className="mt-16 flex flex-col gap-2">
@@ -62,8 +62,9 @@ export default function OwnerSection() {
                   (サウナで創る１つの輪)
                 </p>
               </div>
-              <p className="text-lg md:text-xl text-gray-900 leading-relaxed w-[80%] mx-auto md:w-full">
-                栃木県のサウナを熱くするために活動しております。
+              <p className="text-lg md:text-xl text-gray-900 leading-relaxed w-[80%] mx-auto md:w-full text-left">
+                栃木県のサウナを熱くするため、盛り上げるために活動しております。
+                お客様の心を掴むトークと、究極の「整う」を追求した熱波をお届けします。
               </p>
             </div>
           </div>

@@ -23,10 +23,10 @@ const CustomerCard = ({ testimonial }: { testimonial: CustomerCardProps }) => {
         </div>
         <div>
           <h3 className="font-bold">{testimonial.name}</h3>
-          <p className="text-gray-600">{testimonial.role}</p>
+          {/* <p className="text-gray-600">{testimonial.role}</p> */}
         </div>
       </div>
-      <p className="text-gray-600">{testimonial.comment}</p>
+      <p className="text-gray-600 whitespace-pre-line">{testimonial.comment}</p>
     </div>
   );
 };

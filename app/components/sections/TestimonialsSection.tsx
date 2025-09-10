@@ -12,7 +12,7 @@ export default function TestimonialsSection() {
     <section className="py-20 bg-gray-50">
       <Container>
         <h2 ref={title.ref} className={`text-3xl sm:text-4xl font-bold text-center mb-16 reveal-text ${title.isVisible ? "revealed" : ""}`}>
-          <span>お客様の声</span>
+          <span>お客様の声 (サウナイキタイ投稿)</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-4">
           {customerList.map((testimonial, index) => (

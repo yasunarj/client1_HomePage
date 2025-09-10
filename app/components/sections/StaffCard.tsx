@@ -29,7 +29,7 @@ const StaffCard = ({ staff }: { staff: StaffCardProps }) => {
       </div>
       <h3 className="text-xl font-bold mb-2">{staff.name}</h3>
       <p className="text-orange-500 mb-4">{staff.role}</p>
-      <p className="text-gray-600">{staff.description}</p>
+      <p className="text-gray-600 whitespace-pre-line text-left">{staff.description}</p>
     </div>
   );
 };
