@@ -1,11 +1,15 @@
 import { useFadeInOnView } from "@/hooks/useFadeInOnView";
 import Image from "next/image";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 interface StaffCardProps {
   src: string;
   name: string;
   role: string;
   description: string;
+  handle?: string;
+  xHandle?: string;
 }
 
 const StaffCard = ({ staff }: { staff: StaffCardProps }) => {
@@ -14,7 +18,8 @@ const StaffCard = ({ staff }: { staff: StaffCardProps }) => {
     <div
       ref={fade.ref}
       className={`bg-white p-6 rounded-lg shadow-lg text-center transition-opacity duration-500 ${
-          fade.isVisible ? "opacity-100" : "opacity-0"}`}
+        fade.isVisible ? "opacity-100" : "opacity-0"
+      }`}
     >
       <div
         className="w-48 h-52 mx-auto mb-4 relative rounded-2xl overflow-hidden  
@@ -28,8 +33,41 @@ const StaffCard = ({ staff }: { staff: StaffCardProps }) => {
         />
       </div>
       <h3 className="text-xl font-bold mb-2">{staff.name}</h3>
-      <p className="text-orange-500 mb-4">{staff.role}</p>
-      <p className="text-gray-600 whitespace-pre-line text-left">{staff.description}</p>
+      <p className="mb-1">{staff.role}</p>
+      {/* SNSリンクを条件付きで表示する */}
+      <div className="flex flex-col items-center gap-1 mb-4">
+        {staff.handle && (
+          <a
+            href={`https://www.instagram.com/${staff.handle}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 text-orange-500 hover:text-orange-800 font-bold"
+            aria-label={`Instagram ${staff.name}`}
+          >
+            <FaInstagram />
+            <div className="flex items-center gap-2">
+              Instagram <p>@{staff.handle}</p>
+            </div>
+          </a>
+        )}
+        {staff.xHandle && (
+          <a
+            href={`https://x.com/${staff.xHandle}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 text-blue-500 hover:text-blue-700 font-bold"
+            aria-label={`X ${staff.name}`}
+          >
+            <FaXTwitter />
+            <div className="flex items-center gap-2">
+              <p>@{staff.xHandle}</p>
+            </div>
+          </a>
+        )}
+      </div>
+      <p className="text-gray-600 whitespace-pre-line text-left">
+        {staff.description}
+      </p>
     </div>
   );
 };

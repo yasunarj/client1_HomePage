@@ -7,33 +7,36 @@ import ProfileSection from "./components/sections/ProfileSection";
 import PerformanceSection from "./components/sections/PerformanceSection";
 import GallerySection from "./components/sections/GallerySection";
 import ScheduleSection from "./components/sections/ScheduleSection";
-// import SocialSection from "./components/sections/SocialSection";
+import SocialSection from "./components/sections/SocialSection";
 import TestimonialsSection from "./components/sections/TestimonialsSection";
 import SpecialThanks from "./components/sections/SpecialThanks";
-// import ContactSection from "./components/sections/ContactSection";
+import ContactSection from "./components/sections/ContactSection";
 import ScrollToTop from "./components/scroll/ScrollToTop";
 import FadeInMain from "./components/sections/fadeIn/FadeInMain";
 import Header from "./components/layout/Header";
+import { SECTIONS } from "./lib/sections.flags";
 
 export default function Home() {
   return (
-      <ClientSplashWrapper>
-        <FadeInMain>
-          <Header />
-          <HeroSection />
-          <WhatIsNeppashiSection />
-          <OwnerSection />
-          <ProfileSection />
-          <PerformanceSection />
-          <GallerySection />
-          <ScheduleSection />
-          {/* <SocialSection /> */}
-          <SpecialThanks />
-          <TestimonialsSection />
-          {/* <ContactSection /> */}
-          <ScrollToTop />
-          <Footer />
-        </FadeInMain>
-      </ClientSplashWrapper>
+    <ClientSplashWrapper>
+      <FadeInMain>
+        <Header />
+        <HeroSection />
+        <WhatIsNeppashiSection />
+        <OwnerSection />
+        <ProfileSection />
+        <PerformanceSection />
+        <GallerySection />
+        <ScheduleSection />
+        {/* クライアントよりセクションの削除依頼↓ */}
+        {SECTIONS.social && <SocialSection />}
+        <SpecialThanks />
+        <TestimonialsSection />
+        {/* クライアントよりセクションの削除依頼↓ */}
+        {SECTIONS.contact && <ContactSection />}
+        <ScrollToTop />
+        <Footer />
+      </FadeInMain>
+    </ClientSplashWrapper>
   );
 }

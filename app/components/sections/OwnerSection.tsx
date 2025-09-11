@@ -1,8 +1,8 @@
 "use client";
-
 import Container from "../layout/Container";
 import Image from "next/image";
 import { useFadeInOnView } from "@/hooks/useFadeInOnView";
+import { FaInstagram } from "react-icons/fa";
 
 export default function OwnerSection() {
   const title = useFadeInOnView();
@@ -51,7 +51,21 @@ export default function OwnerSection() {
               className={`flex items-end justify-center md:justify-start gap-6 md:gap-12`}
             >
               <p className="text-lg md:text-xl text-red-700">代表熱波師</p>
-              <h3 className="text-2xl md:text-3xl font-bold">熱波送郎</h3>
+              <h3 className="text-3xl md:text-4xl font-bold">熱波送郎</h3>
+            </div>
+            <div className="text-lg md:text-xl mt-2 md:mt-4 flex justify-center md:justify-start">
+              <a
+                href={`https://www.instagram.com/atunami_okuro37/`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-orange-500 hover:text-orange-800 font-bold"
+                aria-label={`Instagram Owner`}
+              >
+                <FaInstagram />
+                <div className="flex items-center gap-2 mb-1">
+                  Instagram <p>@atunami_okuro37/</p>
+                </div>
+              </a>
             </div>
             <div className="mt-16 flex flex-col gap-2">
               <div className="flex items-center gap-1 justify-center md:justify-start">

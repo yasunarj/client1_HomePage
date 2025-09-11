@@ -1,16 +1,34 @@
+import { FaInstagram } from "react-icons/fa";
 import { shippori } from "@/app/lib/fonts";
 import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer id="contact" className="bg-gray-900 text-white py-12">
       <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">
         お問い合わせ
       </h2>
       <div className="container mx-auto px-4">
         <div className="">
           <div className={`mb-8 md:mb-0 ${shippori.className}`}>
-            <p className="text-lg md:text-xl font-bold mb-4 sm:text-center ">栃木サウナ熱波協会代表 熱波送郎のInstagramへDMをお願いします。</p>
+            <div className="flex items-center justify-center gap-1 md:mb-2">
+              <p className="text-[16px] md:text-xl font-bold text-center">
+                栃木サウナ熱波協会代表 熱波送郎の
+              </p>
+              <a
+                href="https://www.instagram.com/atunami_okuro37/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-1 items-center text-orange-500 text-[16px] md:text-xl font-bold"
+              >
+                <FaInstagram size={24} />
+                Instagram
+              </a>
+              <span className="text-[16px] md:text-xl font-bold">へ</span>
+            </div>
+            <p className="text-[16px] md:text-xl font-bold mb-4 text-center">
+              DMをお願いします。
+            </p>
             {/* <p className="text-gray-400">
               心と体を癒す、究極のサウナ体験を提供します
             </p> */}
