@@ -8,7 +8,7 @@ const SpecialThanks = () => {
   const title = useFadeInOnView();
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className=" bg-gray-50">
       <div className={`w-full max-w-[100vw] overflow-x-hidden px-4`}>
         <div className="max-w-8xl mx-auto">
           <h2
