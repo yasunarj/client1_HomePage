@@ -20,10 +20,7 @@ export default function PartnerCard({ partner, delayMs = 0 }: Props) {
   const fade = useFadeInOnView();
 
   return (
-    <Link
-      href={partner.href}
-      target="_blank"
-      rel="noopener noreferrer"
+    <div
       className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-2xl"
       style={{ transitionDelay: `${delayMs}ms` }}
     >
@@ -51,14 +48,20 @@ export default function PartnerCard({ partner, delayMs = 0 }: Props) {
         </div>
 
         {/* 本文 */}
-        <div className="p-6 text-center flex flex-col gap-2 flex-1">
-          <h3 className="text-xl md:text-lg font-bold text-gray-800 group-hover:text-blue-600 transition-colors flex flex-col gap-1">
+        <div className="p-6 text-center flex flex-col gap-1 flex-1">
+          <h2 className="text-xl md:text-lg font-bold text-gray-800 flex flex-col gap-1">
             <span>{partner.titleLines[0]}</span>
             <span>{partner.titleLines[1]}</span>
-          </h3>
+          </h2>
+          <a
+            href={`https://www.instagram.com/${partner.href}`}
+            target="_blank"
+            rel="noopener noreFerrer"
+            className="inline-block text-orange-500 hover:text-orange-700 font-bold underline mb-2"
+          >Instagram @{partner.href}</a>
           <p className="text-gray-600">{partner.description}</p>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }

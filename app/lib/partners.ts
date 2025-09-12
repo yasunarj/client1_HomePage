@@ -3,14 +3,14 @@ import type { Partner } from "../components/sections/PartnerCard";
 export const partners: Partner[] = [
   {
     id: "ohtawara-onsen",
-    href: "https://www.instagram.com/ohtawaraonsen/",
+    href: "ohtawaraonsen/",
     bigLabel: "太陽",
     titleLines: ["大田原温泉", "太陽の湯"],
     description: "大田原市の中心部に位置する、地域に愛される温泉施設です。",
   },
   {
     id: "sano-yasuragi",
-    href: "https://www.instagram.com/sanoyasuraginoyu/",
+    href: "sanoyasuraginoyu/",
     bigLabel: "佐野",
     titleLines: ["スーパー銭湯", "佐野やすらぎの湯"],
     description:
@@ -18,7 +18,7 @@ export const partners: Partner[] = [
   },
   {
     id: "oyama-yasuragi",
-    href: "https://www.instagram.com/oyamayasuragi/",
+    href: "oyamayasuragi/",
     bigLabel: "小山",
     titleLines: ["スーパー銭湯", "小山やすらぎの湯"],
     description:
