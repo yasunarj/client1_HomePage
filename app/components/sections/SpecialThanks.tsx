@@ -9,7 +9,7 @@ const SpecialThanks = () => {
   const title = useFadeInOnView();
 
   return (
-    <section>
+    <section className="relative py-20 bg-gray-50">
       <Container>
         <h2
           ref={title.ref}
