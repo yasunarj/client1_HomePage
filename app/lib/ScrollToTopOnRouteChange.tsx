@@ -42,10 +42,10 @@ const ScrollToTopOnRouteChange = () => {
   // ブラウザのスクロール復元を無効化（戻る/進む時の意図しない復元対策）
   useEffect(() => {
     if ("scrollRestoration" in history) {
-      const prev = (history as any).scrollRestoration;
-      (history as any).scrollRestoration = "manual";
+      const prev = history.scrollRestoration;
+      history.scrollRestoration = "manual";
       return () => {
-        (history as any).scrollRestoration = prev ?? "auto";
+        history.scrollRestoration = prev ?? "auto";
       };
     }
   }, []);
