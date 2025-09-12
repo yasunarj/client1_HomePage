@@ -13,10 +13,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// export const viewport = {
+//   width: "device-width",
+//   initialScale: 1,
+//   maximumScale: 1,
+// } satisfies Viewport;
 export const viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
+  // 追加
+  viewportFit: "cover",
 } satisfies Viewport;
 
 export const metadata: Metadata = {
@@ -63,11 +70,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      {/* <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased 
+        h-screen overflow-hidden
+        `}
+      > */}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen overflow-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-hidden min-h-[100dvh]`}
       >
         <ScrollToTopOnRouteChange />
-        <div id="scrollable-container" className="flex flex-col h-full overflow-y-auto">{children}</div>
+        {/* <div
+          id="scrollable-container"
+          className="flex flex-col h-full overflow-y-auto"
+        > */}
+        <div
+          id="scrollable-container"
+          className="flex flex-col h-[100dvh] overflow-y-auto overscroll-contain"
+        >
+          {children}
+        </div>
       </body>
     </html>
   );

@@ -3,6 +3,20 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* 修正 */
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
+}
+
+/* 修正 */
+#scrollable-container{
+  /* ゴムスクロールの伝播を止める＆慣性スクロール */
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+
+  /* ノッチ端末で上下が欠けるのを防ぐ */
+  padding-top: var(--safe-top);
+  padding-bottom: var(--safe-bottom);
 }
 
 @theme inline {
