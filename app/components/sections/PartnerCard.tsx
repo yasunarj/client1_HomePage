@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { useFadeInOnView } from "@/hooks/useFadeInOnView";
 
 export type Partner = {
