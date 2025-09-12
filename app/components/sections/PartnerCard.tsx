@@ -5,7 +5,7 @@ import { useFadeInOnView } from "@/hooks/useFadeInOnView";
 export type Partner = {
   id: string;
   href: string;
-  bigLabel: string;            // 例: "太陽" / "佐野" / "小山"
+  bigLabel: string; // 例: "太陽" / "佐野" / "小山"
   titleLines: [string, string]; // 例: ["大田原温泉", "太陽の湯"]
   description: string;
 };
@@ -29,8 +29,13 @@ export default function PartnerCard({ partner, delayMs = 0 }: Props) {
     >
       <div
         className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500 h-full flex flex-col
-          ${fade.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
+          ${
+            fade.isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-4"
+          }
         `}
+        ref={fade.ref}
       >
         {/* 画像の代わりの色面（比率固定） */}
         <div className="aspect-video relative">

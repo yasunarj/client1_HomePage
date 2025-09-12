@@ -6,11 +6,16 @@ const ScheduleTitle = () => {
   return (
     <h2
       ref={title.ref}
-      className={`text-3xl sm:text-4xl font-bold text-center mb-16 reveal-text ${
-        title.isVisible ? "revealed" : ""
+      className={`text-3xl sm:text-4xl font-bold text-center mb-16
       }`}
     >
-      <span>イベントスケジュール</span>
+      <span
+        className={`transition-color duration-[2s] ${
+          title.isVisible ? "text-white" : "text-orange-600"
+        }`}
+      >
+        イベントスケジュール
+      </span>
     </h2>
   );
 };

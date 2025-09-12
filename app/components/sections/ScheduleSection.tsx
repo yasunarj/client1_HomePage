@@ -30,8 +30,10 @@ const parseSchedulePage = (page: PageObjectResponse): ScheduleItem => {
       ? props["場所"].rich_text[0]?.plain_text ?? "場所未設定"
       : "場所未設定";
 
-  const time2 = 
-    "時間２" in props && props["時間２"].type === "date" ? props["時間２"].date?.start ?? null : null;
+  const time2 =
+    "時間２" in props && props["時間２"].type === "date"
+      ? props["時間２"].date?.start ?? null
+      : null;
 
   return { title, date, place, time2 };
 };
@@ -59,22 +61,34 @@ export default async function ScheduleSection() {
   }
 
   const data = await res.json();
-  const scheduleList = (data.results as PageObjectResponse[]).map(parseSchedulePage);
+  const scheduleList = (data.results as PageObjectResponse[]).map(
+    parseSchedulePage
+  );
 
   return (
-    <section id="schedule" className="py-20">
-      <Container>
-        <ScheduleTitle />
-        <div className="max-w-3xl mx-auto mb-4 h-[380px] overflow-y-scroll">
-          <div className="bg-white p-4 rounded-lg shadow-lg">
-            <div className="space-y-4">
-              {scheduleList.map((schedule, index) => (
-                <ScheduleCard key={index} schedule={schedule} />
-              ))}
+    <section
+      id="schedule"
+      className="relative py-20 bg-gray-50 bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "url('/images/pngtree-natural-wood-paneling-lines-the-interior-of-the-sauna-ideal-for-background-or-texture-photo-image_33945628.jpg')",
+      }}
+    >
+      <div className="absolute inset-0 bg-black/20 z-0"></div>
+      <div className="relative z-10">
+        <Container>
+          <ScheduleTitle />
+          <div className="max-w-3xl mx-auto mb-4 h-[380px] overflow-y-scroll">
+            <div className="bg-white p-4 rounded-lg shadow-lg">
+              <div className="space-y-4">
+                {scheduleList.map((schedule, index) => (
+                  <ScheduleCard key={index} schedule={schedule} />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
     </section>
   );
 }
