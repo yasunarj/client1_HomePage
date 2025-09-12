@@ -28,7 +28,7 @@ export default function SplashScreen({ isFading }: SplashScreenProps) {
           極上の熱波体験
         </h1>
         <p className="text-xl md:text-2xl animate-fadeIn delay-500">
-          プロフェッショナルな熱波師があなたのサウナ体験を演出します
+          栃木のプロフェッショナルな熱波師があなたのサウナ体験を演出します
         </p>
       </div>
     </div>

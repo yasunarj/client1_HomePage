@@ -1,20 +1,5 @@
 export const staffList = [
   {
-    name: "あっしー",
-    role: "太陽の湯専属 熱波師",
-    src: "/images/assii.png",
-    description:
-      "神奈川県の激戦区で認められた最高峰のアウフギーサー、優雅で美しいアウフグースは超必見",
-    xHandle: "ashiiii_aufguss",
-  },
-  {
-    name: "熱寅",
-    role: "太陽の湯専属 熱波師",
-    src: "/images/netutora.jpg",
-    description: `親しみやすさと匠なアウフグースでお客様を巻き込む。オールマイティー熱波師`,
-    handle: "nettora.neppashi/",
-  },
-  {
     name: "キャノン伊藤",
     role: "フリー熱波師",
     src: "/images/ito.png",
@@ -27,6 +12,21 @@ export const staffList = [
     src: "/images/yamap.JPG",
     description: `多彩な熱波パフォーマンスで、心と身体に笑いと感動の熱波を届け、サウナを最高の舞台へと変える。究極のエンターテイメント熱波師`,
     handle: "saunakuroobi_yamap/",
+  },
+  {
+    name: "熱寅",
+    role: "太陽の湯専属 熱波師",
+    src: "/images/netutora.jpg",
+    description: `親しみやすさと匠なアウフグースでお客様を巻き込む。オールマイティー熱波師`,
+    handle: "nettora.neppashi/",
+  },
+  {
+    name: "あっしー",
+    role: "太陽の湯専属 熱波師",
+    src: "/images/assii.png",
+    description:
+      "神奈川県の激戦区で認められた最高峰のアウフギーサー、優雅で美しいアウフグースは超必見",
+    xHandle: "ashiiii_aufguss",
   },
   {
     name: "フェレットしょ〜やん",
