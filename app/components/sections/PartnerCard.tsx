@@ -25,7 +25,6 @@ export default function PartnerCard({ partner, delayMs = 0 }: Props) {
       target="_blank"
       rel="noopener noreferrer"
       className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-2xl"
-      ref={fade.ref}
       style={{ transitionDelay: `${delayMs}ms` }}
     >
       <div
