@@ -35,18 +35,18 @@ const StaffCard = ({ staff }: { staff: StaffCardProps }) => {
       <h3 className="text-xl font-bold mb-2">{staff.name}</h3>
       <p className="mb-1">{staff.role}</p>
       {/* SNSリンクを条件付きで表示する */}
-      <div className="flex flex-col items-center gap-1 mb-4">
+      <div className="flex flex-col items-center gap-1 mb-4 w-full">
         {staff.handle && (
           <a
             href={`https://www.instagram.com/${staff.handle}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-orange-500 hover:text-orange-800 font-bold"
+            className="flex items-center justify-center gap-1 text-orange-500 hover:text-orange-800 font-bold w-full overflow-hidden "
             aria-label={`Instagram ${staff.name}`}
           >
             <FaInstagram />
-            <div className="flex items-center gap-2">
-              Instagram <p>@{staff.handle}</p>
+            <div className="flex items-center gap-2 ">
+              Instagram <p className="2xl:hidden">@{staff.handle}</p>
             </div>
           </a>
         )}
@@ -55,7 +55,7 @@ const StaffCard = ({ staff }: { staff: StaffCardProps }) => {
             href={`https://x.com/${staff.xHandle}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-blue-500 hover:text-blue-700 font-bold"
+            className="flex items-center justify-center gap-1 text-blue-500 hover:text-blue-700 font-bold w-full overflow-hidden"
             aria-label={`X ${staff.name}`}
           >
             <FaXTwitter />
