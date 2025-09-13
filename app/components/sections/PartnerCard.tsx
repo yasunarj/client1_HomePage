@@ -1,10 +1,12 @@
 "use client";
 import { useFadeInOnView } from "@/hooks/useFadeInOnView";
+import Image from "next/image";
 
 export type Partner = {
   id: string;
   href: string;
   bigLabel: string; // 例: "太陽" / "佐野" / "小山"
+  image: string;
   titleLines: [string, string]; // 例: ["大田原温泉", "太陽の湯"]
   description: string;
 };
@@ -12,17 +14,13 @@ export type Partner = {
 type Props = {
   partner: Partner;
   // ふわっと表示のディレイ（任意）
-  delayMs?: number;
 };
 
-export default function PartnerCard({ partner, delayMs = 0 }: Props) {
+export default function PartnerCard({ partner }: Props) {
   const fade = useFadeInOnView();
 
   return (
-    <div
-      className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-2xl"
-      style={{ transitionDelay: `${delayMs}ms` }}
-    >
+    <div className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-2xl">
       <div
         className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500 h-full flex flex-col
           ${
@@ -35,7 +33,13 @@ export default function PartnerCard({ partner, delayMs = 0 }: Props) {
       >
         {/* 画像の代わりの色面（比率固定） */}
         <div className="aspect-video relative">
-          <div
+          <Image
+            src={partner.image}
+            fill
+            alt={`栃木サウナ熱波協会 パートナー温泉施設 ${partner.titleLines[1]}`}
+            className="object-cover"
+          />
+          {/* <div
             className={`absolute inset-0 bg-gradient-to-r from-orange-500 to-red-600
               opacity-90 group-hover:opacity-100 transition-opacity`}
           />
@@ -43,7 +47,7 @@ export default function PartnerCard({ partner, delayMs = 0 }: Props) {
             <span className="text-4xl text-white/95 font-bold tracking-widest">
               {partner.bigLabel}
             </span>
-          </div>
+          </div> */}
         </div>
 
         {/* 本文 */}
@@ -57,7 +61,9 @@ export default function PartnerCard({ partner, delayMs = 0 }: Props) {
             target="_blank"
             rel="noopener noreFerrer"
             className="inline-block text-orange-500 hover:text-orange-700 font-bold underline mb-2"
-          >Instagram @{partner.href}</a>
+          >
+            Instagram @{partner.href}
+          </a>
           <p className="text-gray-600">{partner.description}</p>
         </div>
       </div>
