@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
               <span className="text-xl sm:text-4xl">(サウナイキタイ投稿)</span>
             </div>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto mb-4">
             {customerList.map((testimonial, index) => (
               <CustomerCard key={index} testimonial={testimonial} />
             ))}

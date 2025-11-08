@@ -29,7 +29,7 @@ export default function GallerySection() {
               {galleries.map((src, index) => (
                 <div
                   key={index}
-                  className="relative flex-shrink-0 w-64 h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-lg"
+                  className="relative flex-shrink-0 w-80 h-64 lg:w-100 lg:h-80 xl:w-120 xl:h-96 rounded-lg"
                 >
                   <Image
                     src={src}

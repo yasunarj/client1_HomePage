@@ -4,8 +4,8 @@
   --background: #ffffff;
   --foreground: #171717;
   /* 修正 */
-  --safe-top: env(safe-area-inset-top);
-  --safe-bottom: env(safe-area-inset-bottom);
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 /* 修正 */

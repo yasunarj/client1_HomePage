@@ -1,22 +1,35 @@
 import { useFadeInOnView } from "@/hooks/useFadeInOnView";
 import Image from "next/image";
 
-interface CustomerCardProps {
-  src: string;
+export interface CustomerCardProps {
+  src: string | null;
   name: string;
   role: string;
   comment: string;
+  sex: "male" | "female";
 }
+
+const defaultSrc = (sex: "male" | "female") => {
+  return sex === "male"
+    ? "/avatars/sauna-avatar-male.png"
+    : "/avatars/sauna-avatar-female.png";
+};
 
 const CustomerCard = ({ testimonial }: { testimonial: CustomerCardProps }) => {
   const fade = useFadeInOnView();
+  const displaySrc = testimonial.src ?? defaultSrc(testimonial.sex);
   return (
-    <div ref={fade.ref} className={`bg-white p-8 shadow-lg rounded-lg transition-opacity duration-500 ${fade.isVisible ? "opacity-100" : "opacity-0"}`}>
+    <div
+      ref={fade.ref}
+      className={`bg-white p-8 shadow-lg rounded-lg transition-opacity duration-500 ${
+        fade.isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
       <div className="flex items-center mb-4">
-        <div className="relative w-16 h-16 mr-4">
+        <div className="relative w-20 h-20 mr-4">
           <Image
-            src={testimonial.src}
-            alt={`${testimonial.name}様のプロフィール写真(サウナ常連のお客様)`}
+            src={displaySrc}
+            alt={`${testimonial.name}様のプロフィール画像`}
             fill
             className="object-cover rounded-full"
           />

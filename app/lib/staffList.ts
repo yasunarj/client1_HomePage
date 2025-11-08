@@ -44,4 +44,20 @@ export const staffList = [
       "ミュージックロウリュを得意とし、とにかく扇ぐ。熱波を扇ぐ数No.1。タンクトップが似合う漢を目指す熱波師",
     handle: "tanktop_ysk/",
   },
+  {
+    name: "みっちゃん",
+    role: "フリー熱波師",
+    src: "/images/mittyan.jpg",
+    description:
+      "日光の女性熱波師。小柄な身体でダイナミックなアウフグース！At sauna でHot neppa",
+    handle: "mittyan__sauna/",
+  },
+  {
+    name: "Sauna Hentaiki",
+    role: "フリー熱波師",
+    src: "/images/Sauna_Hentaiki.jpg",
+    description:
+      "心底サウナを愛するサウナHentai。匠な技術と盛り上げ力はハンパない！",
+    handle: "sauna_hen.taiki.1137",
+  },
 ];
