@@ -32,6 +32,11 @@ const CustomerCard = ({ testimonial }: { testimonial: CustomerCardProps }) => {
             alt={`${testimonial.name}様のプロフィール画像`}
             fill
             className="object-cover rounded-full"
+            style={{
+              WebkitMaskImage:
+                "radial-gradient(circle, #000 49%, transparent 50%)",
+              maskImage: "radial-gradient(circle, #000 49%, transparent 50%)",
+            }}
           />
         </div>
         <div>
