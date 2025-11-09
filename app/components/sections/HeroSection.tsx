@@ -8,7 +8,8 @@ export default function HeroSection() {
   const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false);
   return (
     <motion.div
-      className="relative h-[100dvh] flex items-center justify-center bg-white"
+      className="relative mt-16 h-[56svh] sm:h-[62svh] md:h-[68vh] lg:h-[80vh] flex items-center justify-center bg-white"
+      // className="relative h-[100dvh] flex items-center justify-center bg-white"
       initial={{ opacity: 0, filter: "brightness(0.5)" }}
       animate={{ opacity: isImageLoaded ? 1 : 0, filter: "brightness(1)" }}
       transition={{ duration: 2 }}
@@ -40,7 +41,9 @@ export default function HeroSection() {
         alt="熱波師がサウナ室で風を送る様子（栃木サウナ熱波協会）"
         fill
         // className="object-cover object-[65%_20%] sm:object-center"
-        className="object-cover [object-position:35%_35%] sm:[object-position:50%_35%] md:[object-position:45%_35%]"
+        className="object-cover [object-position:50%_35%]   
+          sm:[object-position:55%_35%]
+          md:[object-position:50%_35%]"
         loading="eager"
         priority
         quality={80}
