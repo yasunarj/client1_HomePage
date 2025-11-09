@@ -8,7 +8,7 @@ export default function HeroSection() {
   const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false);
   return (
     <motion.div
-      className="relative mt-16 h-[56svh] sm:h-[62svh] md:h-[68vh] lg:h-[80vh] flex items-center justify-center bg-white"
+      className="relative mt-16 h-[54svh] sm:h-[76svh] md:h-[76svh] lg:h-[96svh] flex items-center justify-center bg-white"
       // className="relative h-[100dvh] flex items-center justify-center bg-white"
       initial={{ opacity: 0, filter: "brightness(0.5)" }}
       animate={{ opacity: isImageLoaded ? 1 : 0, filter: "brightness(1)" }}
