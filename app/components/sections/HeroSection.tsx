@@ -13,7 +13,7 @@ export default function HeroSection() {
       animate={{ opacity: isImageLoaded ? 1 : 0, filter: "brightness(1)" }}
       transition={{ duration: 2 }}
     >
-      <Image
+      {/* <Image
         src="/images/heropictureMobile.png"
         alt="熱波師がサウナ室で風を送る様子（栃木サウナ熱波協会）"
         fill
@@ -30,6 +30,17 @@ export default function HeroSection() {
         fill
         // className="object-cover object-[65%_20%] sm:object-center"
         className="object-cover hidden sm:block md:[object-position:50%_35%]"
+        loading="eager"
+        priority
+        quality={80}
+        onLoadingComplete={() => setIsImageLoaded(true)}
+      /> */}
+      <Image
+        src="/images/表紙用写真.jpg"
+        alt="熱波師がサウナ室で風を送る様子（栃木サウナ熱波協会）"
+        fill
+        // className="object-cover object-[65%_20%] sm:object-center"
+        className="object-cover [object-position:35%_35%] sm:[object-position:50%_35%] md:[object-position:45%_35%]"
         loading="eager"
         priority
         quality={80}
