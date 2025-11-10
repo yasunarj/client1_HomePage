@@ -1,0 +1,17 @@
+// app/robots.ts
+import type { MetadataRoute } from "next";
+
+export default function robots(): MetadataRoute.Robots {
+  const base =
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    "https://www.tochigi-sauna-neppakyoukai.jp"; // ←www付きに統一
+
+  return {
+    rules: {
+      userAgent: "*",
+      allow: "/",
+    },
+    sitemap: `${base}/sitemap.xml`,
+  };
+}
+
