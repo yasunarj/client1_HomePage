@@ -26,10 +26,15 @@ export const viewport = {
   viewportFit: "cover",
 } satisfies Viewport;
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  "https://www.tochigi-sauna-neppakyoukai.jp";
+
 export const metadata: Metadata = {
-  title: "栃木サウナ熱波協会",
-  description: "プロフェッショナルな熱波師があなたのサウナ体験を演出します",
-  // viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  metadataBase: new URL(siteUrl),
+  title: "栃木サウナ熱波協会｜出張サウナ・熱波イベントならお任せ",
+  description:
+    "栃木を拠点に活動するプロの熱波師による出張サウナ演出・イベント出演。全国対応も可能な「栃木サウナ熱波協会」公式サイト。",
   keywords: [
     "サウナ",
     "熱波師",
@@ -38,31 +43,26 @@ export const metadata: Metadata = {
     "サウナイベント",
     "栃木サウナ熱波協会",
   ],
+  alternates: { canonical: "/" }, // 相対→絶対に解決される
   openGraph: {
-    title: "栃木サウナ熱波協会",
-    description: "プロの熱波師による最高のサウナ体験をあなたに",
-    url: "https://client1-home-page.vercel.app",
+    type: "website",
     siteName: "栃木サウナ熱波協会",
     locale: "ja_JP",
-    type: "website",
-    images: [
-      {
-        url: "https://client1-home-page.vercel.app/images/gallery1.jpg",
-        width: 1200,
-        height: 630,
-        alt: "栃木サウナ熱波協会 OGP画像",
-      },
-    ],
+    url: "/", // 相対でOK
+    images: ["/images/heroPicture.jpg"], // ←日本語名は避ける
+    title: "栃木サウナ熱波協会｜出張サウナ・熱波イベントならお任せ",
+    description:
+      "栃木を拠点に活動するプロの熱波師による出張サウナ演出・イベント出演。全国対応も可能な「栃木サウナ熱波協会」公式サイト。",
   },
   twitter: {
     card: "summary_large_image",
-    title: "栃木サウナ熱波協会",
-    description: "サウナイベント・出張熱波なら栃木サウナ熱波協会へ。",
-    // site: "@tochigi_sauna",
-    images: ["https://client1-home-page.vercel.app/images/gallery1.jpg"],
+    title: "栃木サウナ熱波協会｜熱波師による出張イベント",
+    description:
+      "栃木から全国へ、プロ熱波師による出張サウナ・イベント出演。公式サイトはこちら。",
+    images: ["/images/heroPicture.jpg"], // 相対OK（metadataBaseで絶対化）
   },
+  icons: { icon: "/favicon.ico" },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
