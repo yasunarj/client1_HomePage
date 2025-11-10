@@ -37,7 +37,7 @@ export default function HeroSection() {
         onLoadingComplete={() => setIsImageLoaded(true)}
       /> */}
       <Image
-        src="/images/表紙用写真.jpg"
+        src="/images/heroPicture.jpg"
         alt="熱波師がサウナ室で風を送る様子（栃木サウナ熱波協会）"
         fill
         // className="object-cover object-[65%_20%] sm:object-center"
