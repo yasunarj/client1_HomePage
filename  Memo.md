@@ -5,7 +5,7 @@ notion連携
 https://chatgpt.com/c/682af1eb-3e04-800d-a71d-1f459a62928a
 
 ドメイン取得の流れ
-https://chatgpt.com/c/682c1082-7e2c-800d-a836-0e2538bf2b6e
+https://chatgpt.com/c/6911b53d-28bc-8320-8fec-ecb772e71248
 
 
 ・ギャラリーコーナーの写真は右にスライドと左にスライドするように２列作成する

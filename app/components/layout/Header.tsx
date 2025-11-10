@@ -65,18 +65,21 @@ export default function Header() {
         >
           <div className="w-full mx-auto px-4 py-4 bg-white/90">
             <div className="flex justify-between items-center mb-8">
-              <Link href="/" className="flex items-center">
-                <div className="w-10 h-10 bg-orange-500 rounded-full mr-3">
-                  <div className="w-10 h-10 bg-orange-500 rounded-full mr-3 relative">
-                    <span className="absolute top-2 left-1 text-white">
-                      ロゴ
-                    </span>
-                  </div>
-                </div>
-                <span className={`text-xl font-bold ${shippori.className}`}>
-                  栃木サウナ熱波協会
-                </span>
-              </Link>
+            <Link href="/" className="flex items-center">
+            <div className="w-12 h-12 rounded-full mr-1 relative animate-fadeIn">
+              <Image
+                src={"/images/header_logo_transparent.png"}
+                fill
+                alt={"栃木サウナ熱波協会の会社のロゴ"}
+                className="object-cover"
+                priority
+              />
+              {/* <span className="absolute top-2 left-1 text-white">ロゴ</span> */}
+            </div>
+            <span className={`text-xl font-bold ${shippori.className} pb-0.5`}>
+              栃木サウナ熱波協会
+            </span>
+          </Link>
               <button
                 className="p-2 rounded-lg hover:bg-gray-100 z-50 relative w-8 h-8"
                 onClick={() => {
