@@ -22,7 +22,7 @@ const parseSchedulePage = (page: PageObjectResponse): ScheduleItem => {
 
   const date =
     "日付" in props && props["日付"].type === "date"
-      ? props["日付"].date!.start ?? "日付なし"
+      ? props["日付"].date?.start ?? "日付なし"
       : "日付なし";
 
   const place =
