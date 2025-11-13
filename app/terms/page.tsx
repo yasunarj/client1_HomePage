@@ -70,9 +70,8 @@ export default function TermsPage() {
               </p>
               <p className="mt-2 text-gray-700">
                 栃木サウナ熱波協会<br />
-                〒324-0001 栃木県大田原市本町1-1-1<br />
-                TEL: 080-1234-5678<br />
-                Email: info@otawara-sauna.com
+                〒324-0001 栃木県大田原市中田原593-3<br />
+                TEL: 0287-24-2525<br />
               </p>
             </section>
           </div>
