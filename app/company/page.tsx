@@ -15,15 +15,15 @@ export default function CompanyPage() {
               </tr>
               <tr className="border-b">
                 <th className="py-4 text-left">設立</th>
-                <td className="py-4">2023年4月1日</td>
+                <td className="py-4">2024年1月1日</td>
               </tr>
               <tr className="border-b">
                 <th className="py-4 text-left">代表者</th>
-                <td className="py-4">代表理事 山田 太郎</td>
+                <td className="py-4">熱波送郎</td>
               </tr>
               <tr className="border-b">
                 <th className="py-4 text-left">所在地</th>
-                <td className="py-4">〒324-0001 栃木県大田原市本町1-1-1</td>
+                <td className="py-4">〒324-0001 栃木県大田原市中田原593-3</td>
               </tr>
               <tr className="border-b">
                 <th className="py-4 text-left">事業内容</th>
@@ -43,8 +43,7 @@ export default function CompanyPage() {
               <tr>
                 <th className="py-4 text-left">お問い合わせ</th>
                 <td className="py-4">
-                  <p>TEL: 080-1234-5678</p>
-                  <p>Email: info@otawara-sauna.com</p>
+                  <p>TEL: 0287-24-2525</p>
                 </td>
               </tr>
             </tbody>
