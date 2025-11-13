@@ -60,11 +60,22 @@ export default function PrivacyPage() {
               <p className="text-gray-700">
                 本プライバシーポリシーに関するお問い合わせは、以下の連絡先までお願いいたします：
               </p>
-              <p className="mt-2 text-gray-700">
+              <div className="mt-2 text-gray-700">
                 栃木サウナ熱波協会<br />
                 〒324-0001 栃木県大田原市中田原593-3<br />
-                TEL: 0287-24-2525<br />
-              </p>
+                <p>
+                    Instagram:{" "}
+                    <a
+                      href="https://www.instagram.com/atunami_okuro37/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram（熱波送郎）"
+                      className="text-blue-600 hover:underline"
+                    >
+                      @atunami_okuro37/
+                    </a>
+                  </p>
+              </div>
             </section>
 
             <section>

@@ -4,8 +4,12 @@ export default function TermsPage() {
   return (
     <main className="min-h-screen bg-gray-50 py-20">
       <div className="container mx-auto px-4">
-        <h1 className={`text-4xl font-bold mb-12 text-center ${shippori.className}`}>利用規約</h1>
-        
+        <h1
+          className={`text-4xl font-bold mb-12 text-center ${shippori.className}`}
+        >
+          利用規約
+        </h1>
+
         <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
           <div className="space-y-8">
             <section>
@@ -68,15 +72,28 @@ export default function TermsPage() {
               <p className="text-gray-700">
                 本規約に関するお問い合わせは、以下の連絡先までお願いいたします：
               </p>
-              <p className="mt-2 text-gray-700">
-                栃木サウナ熱波協会<br />
-                〒324-0001 栃木県大田原市中田原593-3<br />
-                TEL: 0287-24-2525<br />
-              </p>
+              <div className="mt-2 text-gray-700">
+                栃木サウナ熱波協会
+                <br />
+                〒324-0001 栃木県大田原市中田原593-3
+                <br />
+                <p>
+                  Instagram:{" "}
+                  <a
+                    href="https://www.instagram.com/atunami_okuro37/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram（熱波送郎）"
+                    className="text-blue-600 hover:underline"
+                  >
+                    @atunami_okuro37/
+                  </a>
+                </p>
+              </div>
             </section>
           </div>
         </div>
       </div>
     </main>
   );
-} 
+}

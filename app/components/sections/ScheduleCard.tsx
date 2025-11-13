@@ -3,7 +3,7 @@ import { useFadeInOnView } from "@/hooks/useFadeInOnView";
 import { format, parseISO } from "date-fns";
 
 interface ScheduleCardProps {
-  date: string;
+  date: string | null;
   title: string;
   place: string;
   time2: string | null;

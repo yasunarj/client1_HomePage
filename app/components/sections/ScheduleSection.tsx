@@ -7,7 +7,7 @@ import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 interface ScheduleItem {
   title: string;
-  date: string;
+  date: string | null;
   place: string;
   time2: string | null;
 }
@@ -22,8 +22,8 @@ const parseSchedulePage = (page: PageObjectResponse): ScheduleItem => {
 
   const date =
     "日付" in props && props["日付"].type === "date"
-      ? props["日付"].date?.start ?? "日付なし"
-      : "日付なし";
+      ? props["日付"].date?.start ?? null
+      : null;
 
   const place =
     "場所" in props && props["場所"].type === "rich_text"

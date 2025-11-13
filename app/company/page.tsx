@@ -4,8 +4,12 @@ export default function CompanyPage() {
   return (
     <main className="min-h-screen bg-gray-50 py-20">
       <div className="container mx-auto px-4">
-        <h1 className={`text-4xl font-bold mb-12 text-center ${shippori.className}`}>会社概要</h1>
-        
+        <h1
+          className={`text-4xl font-bold mb-12 text-center ${shippori.className}`}
+        >
+          会社概要
+        </h1>
+
         <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
           <table className="w-full">
             <tbody>
@@ -29,10 +33,8 @@ export default function CompanyPage() {
                 <th className="py-4 text-left">事業内容</th>
                 <td className="py-4">
                   <ul className="list-disc list-inside">
-                    <li>サウナ施設の運営</li>
                     <li>サウナイベントの企画・開催</li>
                     <li>サウナ文化の普及活動</li>
-                    <li>サウナ関連商品の販売</li>
                   </ul>
                 </td>
               </tr>
@@ -43,7 +45,18 @@ export default function CompanyPage() {
               <tr>
                 <th className="py-4 text-left">お問い合わせ</th>
                 <td className="py-4">
-                  <p>TEL: 0287-24-2525</p>
+                  <p>
+                    Instagram:{" "}
+                    <a
+                      href="https://www.instagram.com/atunami_okuro37/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram（熱波送郎）"
+                      className="text-blue-600 hover:underline"
+                    >
+                      @atunami_okuro37/
+                    </a>
+                  </p>
                 </td>
               </tr>
             </tbody>
@@ -52,4 +65,4 @@ export default function CompanyPage() {
       </div>
     </main>
   );
-} 
+}
