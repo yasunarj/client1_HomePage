@@ -12,11 +12,16 @@ interface ScheduleCardProps {
 const ScheduleCard = ({ schedule }: { schedule: ScheduleCardProps }) => {
   const dateOnly = schedule.date
     ? format(parseISO(schedule.date), "yyyy年M月d日")
-    : "日付なし";
+    : "日付未定";
+
   const formattedTime = schedule.date
     ? format(parseISO(schedule.date), "H:mm")
-    : "時間なし";
-  const timeOnly = formattedTime === "0:00" ? "時間未定" : `${formattedTime}時`;
+    : null;
+
+  const timeOnly =
+    formattedTime === "0:00" || formattedTime === null
+      ? ""
+      : `${formattedTime}時`;
 
   const formattedTime2 = schedule.time2
     ? format(parseISO(schedule.time2), "H:mm")
@@ -25,7 +30,6 @@ const ScheduleCard = ({ schedule }: { schedule: ScheduleCardProps }) => {
     formattedTime2 === "0:00" || formattedTime2 === null
       ? null
       : `${formattedTime2}時`;
-  console.log(timeOnly2);
 
   const fade = useFadeInOnView();
   return (
@@ -35,11 +39,19 @@ const ScheduleCard = ({ schedule }: { schedule: ScheduleCardProps }) => {
         fade.isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="flex items-center">
+      <div className="flex items-center gap-4">
         <div className="w-32 text-orange-500 font-bold">{dateOnly}</div>
         <div className={timeOnly2 ? `flex flex-row sm:flex-col` : ""}>
           <div className="w-[68px] text-orange-500 font-bold">{timeOnly}</div>
-          <div className={timeOnly2 ? "w-[68px] text-orange-500 font-bold" : ""}>{timeOnly2}</div>
+          {!formattedTime && !formattedTime2 ? (
+            <div className="w-[68px] text-orange-500 font-bold">時間未定</div>
+          ) : (
+            <div
+              className={timeOnly2 ? "w-[68px] text-orange-500 font-bold" : ""}
+            >
+              {timeOnly2}
+            </div>
+          )}
         </div>
       </div>
 

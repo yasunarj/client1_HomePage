@@ -49,7 +49,13 @@ export default async function ScheduleSection() {
         "Notion-Version": "2022-06-28",
       },
       body: JSON.stringify({
-        sorts: [{ property: "日付", direction: "descending" }],
+        filter: {
+          property: "日付",
+          date: {
+            on_or_after: new Date().toISOString().split("T")[0],
+          }
+        },
+        sorts: [{ property: "日付", direction: "ascending" }],
       }),
       cache: "no-store", // ← これが SSR を保証する
     }
