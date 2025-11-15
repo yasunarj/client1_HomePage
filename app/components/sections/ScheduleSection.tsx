@@ -84,8 +84,8 @@ export default async function ScheduleSection() {
       <div className="relative z-10">
         <Container>
           <ScheduleTitle />
-          <div className="max-w-3xl mx-auto mb-4 h-[380px] overflow-y-scroll rounded-lg ">
-            <div className="bg-white p-4 shadow-lg">
+          <div className="max-w-3xl mx-auto mb-4 h-[380px] overflow-y-scroll rounded-lg bg-white ">
+            <div className="p-4 shadow-lg">
               <div className="space-y-4">
                 {scheduleList.map((schedule, index) => (
                   <ScheduleCard key={index} schedule={schedule} />

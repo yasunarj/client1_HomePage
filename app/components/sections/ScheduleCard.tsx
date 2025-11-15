@@ -39,7 +39,7 @@ const ScheduleCard = ({ schedule }: { schedule: ScheduleCardProps }) => {
         fade.isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="flex items-center gap-4">
+      <div className="w-full sm:w-auto flex items-center gap-4">
         <div className="w-32 text-orange-500 font-bold">{dateOnly}</div>
         <div className={timeOnly2 ? `flex flex-row sm:flex-col` : ""}>
           <div className="w-[68px] text-orange-500 font-bold">{timeOnly}</div>

@@ -4,7 +4,7 @@ https://chatgpt.com/c/67f9ee2b-a2b0-800d-9a36-bfbf87fc03b6
 notion連携
 https://chatgpt.com/c/682af1eb-3e04-800d-a71d-1f459a62928a
 
-ドメイン取得の流れ
+googleSearchConsole結果待ち
 https://chatgpt.com/c/6911b53d-28bc-8320-8fec-ecb772e71248
 
 
