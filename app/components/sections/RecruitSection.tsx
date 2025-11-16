@@ -6,7 +6,7 @@ const RecruitSection = () => {
   const title = useFadeInOnView();
 
   return (
-    <section className="py-20 bg-gradient-to-b from-orange-50 via-orange-350 to-orange-400 text-white">
+    <section className="py-20 bg-gradient-to-b from-white via-orange-200 to-orange-400 text-white">
       <div className="w-full max-w-[100vw] overflow-x-hidden px-4">
         <div className="max-w-6xl mx-auto">
           {/* タイトル */}
