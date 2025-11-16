@@ -77,9 +77,15 @@ const RecruitSection = () => {
               </p>
             </div>
           </div>
-
-          {/* 下に少し余白 */}
         </div>
+      </div>
+      <div className="mt-10 text-center w-full max-w-[100vw] overflow-x-hidden px-4">
+        <p className="text-sm md:text-base font-semibold text-gray-800">
+          募集に関するお問い合わせは、
+          <br className="hidden sm:block" />
+          この下の「お問い合わせ」よりお気軽にご連絡ください。
+        </p>
+        <p className="mt-2 text-2xl md:text-3xl text-orange-600">↓↓↓↓↓↓</p>
       </div>
     </section>
   );
