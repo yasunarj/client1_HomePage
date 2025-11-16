@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer id="contact" className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-4">
+      {/* <div className="container mx-auto px-4">
         <div className="text-[16px] md:text-xl leading-tight flex justify-center">
           <div className="inline-block font-bold">
             <p className="flex">
@@ -15,7 +15,7 @@ export default function Footer() {
             <p>2、熱波師になりたい方の随時募集</p>
           </div>
         </div>
-      </div>
+      </div> */}
       <h2 className="text-3xl sm:text-4xl font-bold text-center my-8">
         お問い合わせ
       </h2>
@@ -28,7 +28,7 @@ export default function Footer() {
       md:mb-2
     "
           >
-            <p className="text-[16px] md:text-xl font-bold leading-tight">
+            <p className="text-[16px] md:text-xl font-bold leading-tight text-center">
               栃木サウナ熱波協会代表
               熱波送郎、または太陽の湯の公式InstagramへDMをお願いします。
             </p>

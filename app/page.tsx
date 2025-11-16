@@ -15,6 +15,7 @@ import ScrollToTop from "./components/scroll/ScrollToTop";
 import FadeInMain from "./components/sections/fadeIn/FadeInMain";
 import Header from "./components/layout/Header";
 import { SECTIONS } from "./lib/sections.flags";
+import RecruitSection from "./components/sections/RecruitSection";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
         <TestimonialsSection />
         {/* クライアントよりセクションの削除依頼↓ */}
         {SECTIONS.contact && <ContactSection />}
+        <RecruitSection />
         <ScrollToTop />
         <Footer />
       </FadeInMain>
