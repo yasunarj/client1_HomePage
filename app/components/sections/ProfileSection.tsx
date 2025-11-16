@@ -18,6 +18,7 @@ export default function ProfileSection() {
             }`}
           >
             <span>熱波師プロフィール</span>
+            <div className="mt-1 w-68 sm:w-80 h-1 bg-gradient-to-r from-orange-300 to-red-600 mx-auto rounded-full "></div>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8 max-w-[1920px] mx-auto mb-4">
             {staffList.map((staff, index) => {

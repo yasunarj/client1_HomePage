@@ -6,7 +6,7 @@ const RecruitSection = () => {
   const title = useFadeInOnView();
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white via-orange-200 to-orange-400 text-white">
+    <section className="py-20 bg-gradient-to-b from-white via-orange-200 to-orange-300 text-white">
       <div className="w-full max-w-[100vw] overflow-x-hidden px-4">
         <div className="max-w-6xl mx-auto">
           {/* タイトル */}
@@ -16,9 +16,10 @@ const RecruitSection = () => {
               title.isVisible ? "revealed" : ""
             }`}
           >
-            <span className="inline-block border-b-2 border-orange-500 pb-2">
+            <span className="inline-block">
               熱波イベント・熱波師募集
             </span>
+            <div className="mt-1 w-84 sm:w-108 h-1 bg-gradient-to-r from-orange-300 to-red-600 mx-auto rounded-full "></div>
           </h2>
 
           {/* リード文 */}

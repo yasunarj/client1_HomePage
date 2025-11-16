@@ -18,6 +18,7 @@ const SpecialThanks = () => {
             }`}
           >
             <span>パートナー温泉施設</span>
+            <div className="mt-1 w-68 sm:w-84 h-1 bg-gradient-to-r from-orange-300 to-red-600 mx-auto rounded-full "></div>
           </h2>
 
           <div

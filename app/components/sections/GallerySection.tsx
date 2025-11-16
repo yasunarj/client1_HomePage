@@ -18,6 +18,7 @@ export default function GallerySection() {
             }`}
           >
             ギャラリー
+            <div className="mt-1 w-36 sm:w-44 h-1 bg-gradient-to-r from-orange-300 to-red-600 mx-auto rounded-full "></div>
           </h2>
           <div
             ref={galleryImage.ref}

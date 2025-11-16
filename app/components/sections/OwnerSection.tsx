@@ -19,6 +19,7 @@ export default function OwnerSection() {
           }`}
         >
           <span>栃木サウナ熱波協会 代表</span>
+          <div className="mt-1 w-84 sm:w-104 h-1 bg-gradient-to-r from-orange-300 to-red-600 mx-auto rounded-full "></div>
         </h2>
         <div
           ref={content.ref}
