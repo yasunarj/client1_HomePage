@@ -9,7 +9,7 @@ export default function WhatIsNeppashiSection() {
   const image = useFadeInOnView();
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white via-orange-100 to-orange-300">
+    <section className="py-20 bg-gradient-to-b from-white via-orange-50 to-orange-300">
       <Container>
         <div className="max-w-5xl mx-auto overflow-hidden p-2">
           <div className="text-center mb-16">
