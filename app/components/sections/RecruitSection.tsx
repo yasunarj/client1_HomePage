@@ -46,7 +46,6 @@ const RecruitSection = () => {
                 熱波イベントの実施をご検討中の施設様を募集しています。
               </p>
               <ul className="list-disc list-inside text-sm md:text-base text-gray-100 space-y-1 mb-4">
-                <li>単発イベントから定期開催まで柔軟に対応</li>
                 <li>イベント内容の企画・演出のご提案</li>
                 <li>プロ熱波師による当日の運営サポート</li>
               </ul>
