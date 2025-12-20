@@ -85,7 +85,7 @@ const RecruitSection = () => {
           <br className="hidden sm:block" />
           この下の「お問い合わせ」よりお気軽にご連絡ください。
         </p>
-        <p className="mt-2 text-2xl md:text-3xl text-orange-600">↓↓↓↓↓↓</p>
+        <p className="mt-2 text-2xl md:text-3xl py-1 text-orange-600 ">↓↓↓↓↓↓</p>
       </div>
     </section>
   );
