@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { ChevronUp } from "lucide-react";
 
+const SCROLL_CONTAINER_ID = "scrollable-container";
+
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
@@ -11,7 +13,6 @@ const ScrollToTop = () => {
     if (!scrollContainer) return;
 
     const toggleVisibility = () => {
-      console.log("ok");
       if (scrollContainer.scrollTop > 500) {
         setIsVisible(true);
       } else {
@@ -26,13 +27,16 @@ const ScrollToTop = () => {
   }, []);
 
   const scrollToTop = () => {
-    const scrollContainer = document.querySelector("body > div");
+    const scrollContainer = document.getElementById(SCROLL_CONTAINER_ID);
     if (scrollContainer) {
       scrollContainer.scrollTo({
         top: 0,
         behavior: "smooth",
       });
+      return;
     }
+
+    window.scrollTo({top: 0, behavior: "smooth"})
   };
 
   return (
