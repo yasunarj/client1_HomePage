@@ -56,7 +56,7 @@ const ScheduleCard = ({ schedule }: { schedule: ScheduleCardProps }) => {
       </div>
 
       <div className="flex-1">
-        <div className="font-bold">{schedule.title}</div>
+        <div className="font-bold whitespace-pre-wrap break-words">{schedule.title.replaceAll("/", "\n")}</div>
         <div>{schedule.place}</div>
       </div>
     </div>
