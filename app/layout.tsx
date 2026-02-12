@@ -70,16 +70,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-hidden min-h-[100dvh]`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ScrollToTopOnRouteChange />
-        <div
-          id="scrollable-container"
-          className="flex flex-col h-[100dvh] overflow-y-auto overscroll-contain"
-        >
           {children}
-        </div>
       </body>
     </html>
   );
