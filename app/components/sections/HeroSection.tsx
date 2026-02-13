@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import hero from "@/public/images/heroPicture.jpg";
 
 export default function HeroSection() {
   const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false);
@@ -38,7 +39,7 @@ export default function HeroSection() {
         onLoadingComplete={() => setIsImageLoaded(true)}
       /> */}
       <Image
-        src="/images/heroPicture.jpg"
+        src={hero}
         alt="熱波師がサウナ室で風を送る様子（栃木サウナ熱波協会）"
         fill
         // className="object-cover object-[65%_20%] sm:object-center"
