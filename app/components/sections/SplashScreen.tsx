@@ -7,7 +7,7 @@ interface SplashScreenProps {
 
 export default function SplashScreen({ isFading }: SplashScreenProps) {
   return (
-    <div className={`min-h-[100dvh] fixed inset-0 flex items-center justify-center bg-gradient-to-b  from-orange-500 to-red-700  transition-opacity duration-1000 ${isFading ? 'opacity-0' : 'opacity-100'}`}>
+    <div className={`min-h-[100dvh] fixed inset-0 flex items-center justify-center bg-gradient-to-b  from-orange-500 to-red-700 overflow-hidden transition-opacity duration-1000 ${isFading ? 'opacity-0' : 'opacity-100'}`}>
 
       <div className="absolute inset-0 opacity-50 flex items-center animate-fadeIn">
         <Image 
