@@ -30,6 +30,7 @@ const StaffCard = ({ staff }: { staff: StaffCardProps }) => {
           fill
           alt={`栃木サウナ熱波協会 所属熱波師 ${staff.name} (${staff.role})`}
           className="object-cover"
+          sizes="192px"
         />
       </div>
       <h3 className="text-xl font-bold mb-2">{staff.name}</h3>

@@ -47,7 +47,7 @@ export default function HeroSection() {
         loading="eager"
         priority
         quality={80}
-        onLoadingComplete={() => setIsImageLoaded(true)}
+        onLoad={() => setIsImageLoaded(true)}
       />
       <div className="absolute inset-0 bg-black/20"></div>
       <div className={`relative z-10 text-center text-white px-4`}>

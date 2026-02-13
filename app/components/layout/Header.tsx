@@ -21,6 +21,7 @@ export default function Header() {
                 alt={"栃木サウナ熱波協会の会社のロゴ"}
                 className="object-cover"
                 priority
+                sizes="48px"
               />
               {/* <span className="absolute top-2 left-1 text-white">ロゴ</span> */}
             </div>
@@ -73,6 +74,7 @@ export default function Header() {
                 alt={"栃木サウナ熱波協会の会社のロゴ"}
                 className="object-cover"
                 priority
+                sizes="48px"
               />
               {/* <span className="absolute top-2 left-1 text-white">ロゴ</span> */}
             </div>
