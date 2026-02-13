@@ -48,7 +48,7 @@ export default function HeroSection() {
         loading="eager"
         priority
         sizes="100vw"
-        quality={80}
+        placeholder="blur"
         onLoadingComplete={() => setIsImageLoaded(true)}
       />
       <div className="absolute inset-0 bg-black/20"></div>
