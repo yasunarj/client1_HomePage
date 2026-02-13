@@ -8,11 +8,11 @@ export default function HeroSection() {
   const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false);
   return (
     <motion.div
-      className="relative mt-16 h-[54svh] sm:h-[76svh] md:h-[76svh] lg:h-[96svh] flex items-center justify-center bg-white"
+      className="relative mt-16 h-[54svh] sm:h-[76svh] md:h-[76svh] lg:h-[96svh] flex items-center justify-center bg-gray-900"
       // className="relative h-[100dvh] flex items-center justify-center bg-white"
       initial={{ opacity: 0, filter: "brightness(0.5)" }}
       animate={{ opacity: isImageLoaded ? 1 : 0, filter: "brightness(1)" }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 0.8 }}
     >
       {/* <Image
         src="/images/heropictureMobile.png"
@@ -41,13 +41,14 @@ export default function HeroSection() {
         alt="熱波師がサウナ室で風を送る様子（栃木サウナ熱波協会）"
         fill
         // className="object-cover object-[65%_20%] sm:object-center"
-        className="object-cover [object-position:50%_35%]   
+        className={`object-cover [object-position:50%_35%]   
           sm:[object-position:55%_35%]
-          md:[object-position:50%_35%]"
+          md:[object-position:50%_35%] transition-opacity duration-700 ${ isImageLoaded ? "opacity-100" : "opacity-0" }`}
         loading="eager"
         priority
+        sizes="100vw"
         quality={80}
-        onLoad={() => setIsImageLoaded(true)}
+        onLoadingComplete={() => setIsImageLoaded(true)}
       />
       <div className="absolute inset-0 bg-black/20"></div>
       <div className={`relative z-10 text-center text-white px-4`}>
