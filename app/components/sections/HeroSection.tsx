@@ -11,7 +11,8 @@ export default function HeroSection() {
       className="relative mt-16 h-[54svh] sm:h-[76svh] md:h-[76svh] lg:h-[96svh] flex items-center justify-center bg-gray-900"
       // className="relative h-[100dvh] flex items-center justify-center bg-white"
       initial={{ opacity: 0, filter: "brightness(0.5)" }}
-      animate={{ opacity: isImageLoaded ? 1 : 0, filter: "brightness(1)" }}
+      // animate={{ opacity: isImageLoaded ? 1 : 0, filter: "brightness(1)" }}
+      animate={{ opacity: 1, filter: "brightness(1)" }}
       transition={{ duration: 0.8 }}
     >
       {/* <Image
