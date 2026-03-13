@@ -60,4 +60,12 @@ export const staffList = [
       "心底サウナを愛するサウナHentai。匠な技術と盛り上げ力はハンパない！",
     handle: "sauna_hen.taiki.1137",
   },
+  {
+    name: "はるSUN",
+    role: "フリー熱波師",
+    src: "/images/Sauna_Hentaiki.jpg",
+    description:
+      "県北最年長デビュー！！心地よい熱波を追求した、いい風特化型熱波師",
+      handle: "harusun_bas_poke_neppa",
+  }
 ];
