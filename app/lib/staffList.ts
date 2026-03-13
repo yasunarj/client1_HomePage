@@ -63,7 +63,7 @@ export const staffList = [
   {
     name: "はるSUN",
     role: "フリー熱波師",
-    src: "/images/Sauna_Hentaiki.jpg",
+    src: "/images/Harusun_profile.JPG",
     description:
       "県北最年長デビュー！！心地よい熱波を追求した、いい風特化型熱波師",
       handle: "harusun_bas_poke_neppa",
