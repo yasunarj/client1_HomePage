@@ -1,12 +1,5 @@
 export const staffList = [
   {
-    name: "キャノン伊藤",
-    role: "フリー熱波師",
-    src: "/images/ito.png",
-    description: `匠なアウフグースと、威力抜群のパワー熱波。一度受けたら忘れられない熱風で身体の芯から整わせる。得意技「伊藤キャノン」`,
-    handle: "cannon_it/",
-  },
-  {
     name: "サウナ黒帯 山P",
     role: "フリー熱波師",
     src: "/images/yamap.JPG",
