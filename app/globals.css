@@ -74,6 +74,170 @@ body {
   }
 }
 
+@keyframes flameGradient {
+  0% {
+    background-position: 50% 45%;
+    transform: scale(1) rotate(0deg);
+  }
+  20% {
+    background-position: 35% 65%;
+    transform: scale(1.08) rotate(-1deg);
+  }
+  45% {
+    background-position: 70% 35%;
+    transform: scale(1.12) rotate(1deg);
+  }
+  70% {
+    background-position: 42% 78%;
+    transform: scale(1.06) rotate(-0.5deg);
+  }
+  100% {
+    background-position: 50% 45%;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes heatWave {
+  0% {
+    opacity: 0.45;
+    transform: translate3d(-4%, 3%, 0) scale(1) rotate(0deg);
+  }
+  25% {
+    opacity: 0.7;
+    transform: translate3d(5%, -4%, 0) scale(1.12) rotate(3deg);
+  }
+  50% {
+    opacity: 0.55;
+    transform: translate3d(2%, 6%, 0) scale(1.2) rotate(-4deg);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translate3d(-6%, -2%, 0) scale(1.1) rotate(2deg);
+  }
+  100% {
+    opacity: 0.45;
+    transform: translate3d(-4%, 3%, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes flameFlow {
+  0% {
+    opacity: 0.2;
+    transform: translateX(-18%) translateY(8%) rotate(0deg) scale(1);
+  }
+  35% {
+    opacity: 0.45;
+    transform: translateX(10%) translateY(-6%) rotate(6deg) scale(1.1);
+  }
+  70% {
+    opacity: 0.32;
+    transform: translateX(22%) translateY(4%) rotate(-4deg) scale(1.18);
+  }
+  100% {
+    opacity: 0.2;
+    transform: translateX(-18%) translateY(8%) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes logoReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+    filter: blur(18px);
+  }
+  45% {
+    opacity: 0.45;
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes titleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes subtitleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: translateX(-50%) scale(1.15);
+  }
+}
+
+@keyframes pulseGlowSlow {
+  0%,
+  100% {
+    opacity: 0.18;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.2);
+  }
+}
+
+.animate-flameGradient {
+  animation: flameGradient 5s ease-in-out infinite;
+}
+
+.animate-heatWave {
+  animation: heatWave 4.8s ease-in-out infinite;
+}
+
+.animate-flameFlow {
+  animation: flameFlow 5.6s ease-in-out infinite;
+}
+
+.animate-logoReveal {
+  animation: logoReveal 1.8s ease-out 0.75s forwards;
+}
+
+.animate-titleReveal {
+  animation: titleReveal 1.5s ease-out 2.25s forwards;
+}
+
+.animate-subtitleReveal {
+  animation: subtitleReveal 1.5s ease-out 3.15s forwards;
+}
+
+.animate-pulseGlow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.animate-pulseGlowSlow {
+  animation: pulseGlowSlow 5.5s ease-in-out infinite;
+}
+
 .reveal-text {
   background: linear-gradient(
     to right,

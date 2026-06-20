@@ -7,30 +7,51 @@ interface SplashScreenProps {
 
 export default function SplashScreen({ isFading }: SplashScreenProps) {
   return (
-    <div className={`fixed inset-0 flex items-center justify-center bg-gradient-to-b  from-orange-500 to-red-700 overflow-hidden transition-opacity duration-1000 ${isFading ? 'opacity-0' : 'opacity-100'}`}>
+    <div
+      className={`fixed inset-0 z-50 flex items-center justify-center overflow-hidden transition-opacity duration-1000 ${isFading ? "opacity-0" : "opacity-100"}`}
+    >
+      {/* ゆらめく背景 */}
+      <div className="absolute inset-0 animate-flameGradient bg-[radial-gradient(circle_at_50%_30%,#ffd18a_0%,#fb923c_28%,#dc2626_62%,#3b0a0a_100%)] bg-[length:240%_240%]" />
 
-      <div className="absolute inset-0 opacity-50 flex items-center animate-fadeIn">
-        <Image 
+      {/* 熱気のゆらぎレイヤー */}
+      <div className="absolute inset-[-20%] animate-heatWave bg-[radial-gradient(circle_at_30%_40%,rgba(255,214,120,0.45),transparent_28%),radial-gradient(circle_at_70%_65%,rgba(239,68,68,0.38),transparent_32%),radial-gradient(circle_at_50%_80%,rgba(251,146,60,0.35),transparent_30%)] blur-2xl" />
+
+      {/* 炎の流れレイヤー */}
+      <div className="absolute inset-[-15%] animate-flameFlow bg-[linear-gradient(115deg,transparent_0%,rgba(255,237,213,0.20)_22%,transparent_38%,rgba(248,113,113,0.22)_58%,transparent_76%)] blur-xl" />
+
+      {/* 暗めのオーバーレイ */}
+      <div className="absolute inset-0 bg-black/30" />
+
+      {/* 光のにじみ */}
+      <div className="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-orange-300/30 blur-3xl animate-pulseGlow" />
+      <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-red-500/20 blur-3xl animate-pulseGlowSlow" />
+
+      {/* ロゴ */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-0 animate-logoReveal">
+        <Image
           src={"/images/炎のロゴのグラデーションデザイン.png"}
-          alt="栃木サウナ熱波協会の会社のロゴ"
+          alt="栃木サウナ熱波協会のロゴ"
           width={1200}
           height={1200}
-          className="mx-auto object-contain"
+          className="w-[75vw] max-w-[900px] object-contain opacity-60"
           priority
         />
       </div>
 
-      <div className="absolute inset-0 opacity-30">
-        {/* <div className="absolute inset-0 bg-[url('/steam.png')] bg-repeat-x animate-float"></div> */}
-      </div>
-      <div className={`${shippori.className} relative z-10 text-center text-white px-4`}>
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fadeIn">
+      {/* テキスト */}
+      <div
+        className={`${shippori.className} relative z-10 px-4 text-center text-white`}
+      >
+        <h1 className="opacity-0 animate-titleReveal text-5xl font-bold tracking-[0.12em] drop-shadow-2xl md:text-7xl">
           極上の熱波体験
         </h1>
-        <p className="text-xl md:text-2xl animate-fadeIn delay-500">
-          栃木のプロフェッショナルな熱波師があなたのサウナ体験を演出します
+
+        <p className="mt-6 opacity-0 animate-subtitleReveal text-lg leading-relaxed tracking-wide text-orange-50 drop-shadow-xl md:text-2xl">
+          栃木のproフェッショナルな熱波師が
+          <br className="hidden md:block" />
+          あなたのサウナ体験を演出します
         </p>
       </div>
     </div>
   );
-} 
+}
