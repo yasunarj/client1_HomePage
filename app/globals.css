@@ -9,7 +9,7 @@
 }
 
 /* 修正 */
-#scrollable-container{
+#scrollable-container {
   /* ゴムスクロールの伝播を止める＆慣性スクロール */
   overscroll-behavior-y: contain;
   -webkit-overflow-scrolling: touch;
@@ -236,6 +236,47 @@ body {
 
 .animate-pulseGlowSlow {
   animation: pulseGlowSlow 5.5s ease-in-out infinite;
+}
+
+.splash-main-gradient {
+  background-image: radial-gradient(
+    circle at 50% 30%,
+    #ffd18a 0%,
+    #fb923c 28%,
+    #dc2626 62%,
+    #3b0a0a 100%
+  );
+  background-size: 240% 240%;
+}
+
+.splash-heat-wave-bg {
+  background-image:
+    radial-gradient(
+      circle at 30% 40%,
+      rgba(255, 214, 120, 0.45),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 70% 65%,
+      rgba(239, 68, 68, 0.38),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 50% 80%,
+      rgba(251, 146, 60, 0.35),
+      transparent 30%
+    );
+}
+
+.splash-flame-flow-bg {
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 237, 213, 0.2) 22%,
+    transparent 38%,
+    rgba(248, 113, 113, 0.22) 58%,
+    transparent 76%
+  );
 }
 
 .reveal-text {

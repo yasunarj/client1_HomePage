@@ -11,13 +11,13 @@ export default function SplashScreen({ isFading }: SplashScreenProps) {
       className={`fixed inset-0 z-50 flex items-center justify-center overflow-hidden transition-opacity duration-1000 ${isFading ? "opacity-0" : "opacity-100"}`}
     >
       {/* ゆらめく背景 */}
-      <div className="absolute inset-0 animate-flameGradient bg-[radial-gradient(circle_at_50%_30%,#ffd18a_0%,#fb923c_28%,#dc2626_62%,#3b0a0a_100%)] bg-[length:240%_240%]" />
+      <div className="absolute inset-0 animate-flameGradient splash-main-gradient" />
 
       {/* 熱気のゆらぎレイヤー */}
-      <div className="absolute inset-[-20%] animate-heatWave bg-[radial-gradient(circle_at_30%_40%,rgba(255,214,120,0.45),transparent_28%),radial-gradient(circle_at_70%_65%,rgba(239,68,68,0.38),transparent_32%),radial-gradient(circle_at_50%_80%,rgba(251,146,60,0.35),transparent_30%)] blur-2xl" />
+      <div className="absolute inset-[-20%] animate-heatWave splash-heat-wave-bg blur-2xl" />
 
       {/* 炎の流れレイヤー */}
-      <div className="absolute inset-[-15%] animate-flameFlow bg-[linear-gradient(115deg,transparent_0%,rgba(255,237,213,0.20)_22%,transparent_38%,rgba(248,113,113,0.22)_58%,transparent_76%)] blur-xl" />
+      <div className="absolute inset-[-15%] animate-flameFlow splash-flame-flow-bg blur-xl" />
 
       {/* 暗めのオーバーレイ */}
       <div className="absolute inset-0 bg-black/30" />
