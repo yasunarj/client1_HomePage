@@ -20,7 +20,7 @@ export default function SplashScreen({ isFading }: SplashScreenProps) {
       <div className="absolute inset-[-15%] animate-flameFlow splash-flame-flow-bg blur-xl" />
 
       {/* 暗めのオーバーレイ */}
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/10" />
 
       {/* 光のにじみ */}
       <div className="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-orange-300/30 blur-3xl animate-pulseGlow" />

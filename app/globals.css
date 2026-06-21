@@ -206,6 +206,20 @@ body {
   }
 }
 
+@keyframes heroZoom {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-heroZoom {
+  animation: heroZoom 6000ms linear forwards;
+}
+
 .animate-flameGradient {
   animation: flameGradient 5s ease-in-out infinite;
 }
