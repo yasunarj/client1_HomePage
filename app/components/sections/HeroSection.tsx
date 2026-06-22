@@ -19,6 +19,7 @@ export default function HeroSection() {
   const [previousImageIndex, setPreviousImageIndex] = useState<number | null>(
     null,
   );
+  // previousImageIndex の役割は画像が切り替わる時に切り替え前の画像の scale が 100 に戻らないように維持するため。nullになるまでの画像切り替え後の１秒間は scale-110 を維持するようにするために画像が縮まない
 
   useEffect(() => {
     const timer = setInterval(() => {
