@@ -1,15 +1,16 @@
 "use client";
 
 // import { stepList } from "@/app/lib/stepList";
-import Container from "../layout/Container";
 // import StepCard from "./StepCard";
+
+import Container from "../layout/Container";
 import { useFadeInOnView } from "@/hooks/useFadeInOnView";
 
 export default function PerformanceSection() {
   const title = useFadeInOnView();
   return (
     <section
-      id="service"
+      id="performance"
       className="relative py-20 bg-gray-50 bg-cover bg-center"
       style={{
         backgroundImage:

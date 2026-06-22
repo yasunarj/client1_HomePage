@@ -77,7 +77,7 @@ export default function HeroSection() {
         );
       })}
 
-      <div className="absolute inset-0 bg-black/25" />
+      <div className="absolute inset-0 z-20 bg-black/25" />
 
       <div className="relative z-30 flex h-full items-center justify-center px-4 text-center text-white">
         <div>
