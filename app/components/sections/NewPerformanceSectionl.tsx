@@ -52,10 +52,9 @@ const NewPerformanceSection = () => {
                 <iframe
                   src={`https://www.youtube.com/embed/${mainVideo.id}?rel=0`}
                   title={mainVideo.title}
-                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                  className="h-full w-full"
+                  className="h-full w-full border-0"
                 />
               </div>
             </div>
@@ -70,10 +69,9 @@ const NewPerformanceSection = () => {
                     <iframe
                       src={`https://www.youtube.com/embed/${video.id}?rel=0`}
                       title={video.title}
-                      frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
-                      className="h-full w-full"
+                      className="h-full w-full border-0"
                     />
                   </div>
                 </div>
