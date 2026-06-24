@@ -1,5 +1,3 @@
-import { SiQbittorrent } from "react-icons/si";
-
 export const performanceVideos = [
   {
     id: "-M3AcJQhIcM",

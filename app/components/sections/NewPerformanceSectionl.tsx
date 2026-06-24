@@ -19,7 +19,7 @@ const NewPerformanceSection = () => {
           "url('/images/pngtree-natural-wood-paneling-lines-the-interior-of-the-sauna-ideal-for-background-or-texture-photo-image_33945628.jpg')",
       }}
     >
-      <div className="absolute inset-0 z-0 bg-black/30" />
+      <div className="absolute inset-0 z-0 bg-black/45" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_20%,rgba(249,115,22,0.35),transparent_35%)]" />
 
       <div className="relative z-10 w-full">
@@ -47,7 +47,7 @@ const NewPerformanceSection = () => {
           </div>
 
           <div className="mx-auto max-w-5xl">
-            <div className="overflow-hidden rounded-2xl border border-white/15 bg-black/40 shadow-2xl shadow-black/40 backdrop-blur-sm">
+            <div className="overflow-hidden rounded-2xl border border-white/30 bg-black/40 shadow-2xl shadow-black/40 backdrop-blur-sm">
               <div className="aspect-video">
                 <iframe
                   src={`https://www.youtube.com/embed/${mainVideo.id}?rel=0`}
@@ -63,7 +63,7 @@ const NewPerformanceSection = () => {
               {subVideos.map((video) => (
                 <div
                   key={video.id}
-                  className="overflow-hidden rounded-xl border border-white/10 bg-black/35 shadow-lg shadow-black/30 backdrop-blur-sm"
+                  className="overflow-hidden rounded-xl border border-white/30 bg-black/35 shadow-lg shadow-black/30 backdrop-blur-sm"
                 >
                   <div className="aspect-video">
                     <iframe
