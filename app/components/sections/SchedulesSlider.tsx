@@ -50,7 +50,7 @@ const ScheduleSlider = ({ scheduleList }: ScheduleSliderProps) => {
   }
 
   return (
-    <div className="mx-auto mt-10 max-w-4xl rounded-3xl border border-white/15 bg-black/35 p-4 shadow-2xl shadow-black/40 backdrop-blur-sm sm:p-6">
+    <div className="mx-auto mt-10 max-w-4xl border border-white/15 bg-black/35 p-4 shadow-2xl shadow-black/40 backdrop-blur-sm sm:p-6">
       {/* スマホ用：ページ切り替え */}
       <div className="md:hidden">
         <div ref={scrollAreaRef} className="h-[420px] overflow-y-auto pr-1">
@@ -69,7 +69,7 @@ const ScheduleSlider = ({ scheduleList }: ScheduleSliderProps) => {
             <button
               type="button"
               onClick={goToPrevPage}
-              className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+              className="border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               戻
             </button>
@@ -89,7 +89,7 @@ const ScheduleSlider = ({ scheduleList }: ScheduleSliderProps) => {
             <button
               type="button"
               onClick={goToNextPage}
-              className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+              className="border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               次
             </button>

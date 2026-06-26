@@ -36,7 +36,7 @@ const ScheduleCard = ({ schedule }: { schedule: ScheduleCardProps }) => {
   return (
     <div
       ref={fade.ref}
-      className={`rounded-2xl border border-white/10 bg-white/95 p-4 shadow-lg shadow-black/20 transition-all duration-500 sm:p-5 ${
+      className={`border border-white/10 bg-white/95 p-4 shadow-lg shadow-black/20 transition-all duration-500 sm:p-5 ${
         fade.isVisible
           ? "translate-y-0 opacity-100"
           : "translate-y-4 opacity-0"

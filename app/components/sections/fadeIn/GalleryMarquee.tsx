@@ -19,7 +19,7 @@ const GalleryMarquee = ({ images, direction }: GalleryMarqueeProps) => {
         {duplicatedImages.map((src, index) => (
           <div
             key={`${src}-${index}`}
-            className="relative h-52 w-72 flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-black/30 shadow-xl shadow-black/40 sm:h-60 sm:w-80 lg:h-72 lg:w-96"
+            className="relative h-52 w-72 flex-shrink-0 overflow-hidden border border-white/10 bg-black/30 shadow-xl shadow-black/40 sm:h-60 sm:w-80 lg:h-72 lg:w-96"
           >
             <Image
               src={src}

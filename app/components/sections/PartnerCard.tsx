@@ -22,7 +22,7 @@ export default function PartnerCard({ partner }: Props) {
   return (
     <div className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-2xl">
       <div
-        className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500 h-full flex flex-col
+        className={`bg-white shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500 h-full flex flex-col
           ${
             fade.isVisible
               ? "opacity-100 translate-y-0"

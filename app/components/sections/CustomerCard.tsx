@@ -21,7 +21,7 @@ const CustomerCard = ({ testimonial }: { testimonial: CustomerCardProps }) => {
   return (
     <div
       ref={fade.ref}
-      className={`bg-white p-8 shadow-lg rounded-lg transition-opacity duration-500 ${
+      className={`bg-white p-8 shadow-lg rounded-md transition-opacity duration-500 ${
         fade.isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
