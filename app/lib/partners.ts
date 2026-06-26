@@ -5,7 +5,7 @@ export const partners: Partner[] = [
     id: "ohtawara-onsen",
     href: "ohtawaraonsen/",
     image: "/images/日帰り館玄関.JPG",
-    bigLabel: "太陽",
+    bigLabel: "大田原",
     titleLines: ["大田原温泉", "太陽の湯"],
     description: "大田原市の中心部に位置する、地域に愛される温泉施設です。",
   },
