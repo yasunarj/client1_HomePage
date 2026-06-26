@@ -74,7 +74,7 @@ export default async function ScheduleSection() {
   return (
     <section
       id="schedule"
-      className="relative flex min-h-[100svh] items-center overflow-hidden bg-gray-950 bg-cover bg-center py-24"
+      className="relative flex min-h-[100svh] items-center overflow-hidden bg-gray-950 py-24"
       style={{
         backgroundImage:
           "url('/images/pngtree-natural-wood-paneling-lines-the-interior-of-the-sauna-ideal-for-background-or-texture-photo-image_33945628.jpg')",

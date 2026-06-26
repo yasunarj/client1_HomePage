@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import ScheduleCard from "./ScheduleCard";
 import type { ScheduleItem } from "./ScheduleSection";
-import { button, div } from "framer-motion/client";
 
 type ScheduleSliderProps = {
   scheduleList: ScheduleItem[];
@@ -13,6 +12,7 @@ const ITEMS_PER_PAGE = 4;
 
 const ScheduleSlider = ({ scheduleList }: ScheduleSliderProps) => {
   const [currentPage, setCurrentPage] = useState<number>(0);
+  const scrollAreaRef = useRef<HTMLDivElement | null>(null);
 
   const pages = useMemo(() => {
     const result: ScheduleItem[][] = [];
@@ -26,6 +26,12 @@ const ScheduleSlider = ({ scheduleList }: ScheduleSliderProps) => {
 
   const totalPages = pages.length;
   const currentSchedules = pages[currentPage] ?? [];
+
+  useEffect(() => {
+    if (!scrollAreaRef.current) return;
+
+    scrollAreaRef.current.scrollTop = 0;
+  }, [currentPage]);
 
   const goToPrevPage = () => {
     setCurrentPage((prev) => (prev === 0 ? totalPages - 1 : prev - 1));
@@ -47,23 +53,25 @@ const ScheduleSlider = ({ scheduleList }: ScheduleSliderProps) => {
     <div className="mx-auto mt-10 max-w-4xl rounded-3xl border border-white/15 bg-black/35 p-4 shadow-2xl shadow-black/40 backdrop-blur-sm sm:p-6">
       {/* スマホ用：ページ切り替え */}
       <div className="md:hidden">
-        <div className="space-y-4">
-          {currentSchedules.map((schedule, index) => (
-            <ScheduleCard
-              key={`${schedule.title}-${schedule.date}-${index}`}
-              schedule={schedule}
-            />
-          ))}
+        <div ref={scrollAreaRef} className="h-[420px] overflow-y-auto pr-1">
+          <div className="space-y-4">
+            {currentSchedules.map((schedule, index) => (
+              <ScheduleCard
+                key={`${schedule.title}-${schedule.date}-${index}`}
+                schedule={schedule}
+              />
+            ))}
+          </div>
         </div>
 
         {totalPages > 1 && (
-          <div className="mt-6 flex items-center justify-between gap-4">
+          <div className="mt-6 flex items-center justify-center gap-4 px-8">
             <button
               type="button"
               onClick={goToPrevPage}
               className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
             >
-              Prev
+              戻
             </button>
 
             <div className="flex items-center gap-2">
@@ -83,11 +91,11 @@ const ScheduleSlider = ({ scheduleList }: ScheduleSliderProps) => {
               onClick={goToNextPage}
               className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
             >
-              Next
+              次
             </button>
           </div>
         )}
-        <p className="mt-4 text-center text-xs text-orange-50/70">
+        <p className="text-center text-xs text-orange-50/70">
           {currentPage + 1} / {totalPages} ページ
         </p>
       </div>
