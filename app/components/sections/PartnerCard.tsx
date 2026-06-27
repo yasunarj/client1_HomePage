@@ -24,7 +24,7 @@ export default function PartnerCard({ partner }: Props) {
       ref={fade.ref}
       className={`group h-full overflow-hidden rounded-lg border border-orange-100 bg-white shadow-xl shadow-orange-950/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-950/20 ${fade.isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"}`}
     >
-      {/* groupの役割がわからない */}
+      {/* groupはこのプロパティにつけられた要素に何かしらのアクションが発生した時に小要素に指定したtransitionが動作するように設定している */}
       <div className="relative aspect-video overflow-hidden">
         <Image
           src={partner.image}
@@ -36,7 +36,7 @@ export default function PartnerCard({ partner }: Props) {
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />
 
-        <div className="absolute lef-4 rounded-full border border-white/30 bg-white/20 px-4 py-1 text-sm font-bold tracking-[0.2em] text-white shadow-lg backdrop-blur-sm">
+        <div className="absolute top-4 left-4 rounded-full border border-white/30 bg-black/20 px-4 py-1 text-sm font-bold tracking-[0.2em] text-white shadow-lg backdrop-blur-sm">
         {/* white/30 の30とはopacityで良いのか？ */}
           {partner.bigLabel}
         </div>
@@ -63,45 +63,5 @@ export default function PartnerCard({ partner }: Props) {
         </p>
       </div>
     </article>
-
-    // <div className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-2xl">
-    //   <div
-    //     className={`bg-white shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500 h-full flex flex-col
-    //       ${
-    //         fade.isVisible
-    //           ? "opacity-100 translate-y-0"
-    //           : "opacity-0 translate-y-4"
-    //       }
-    //     `}
-    //     ref={fade.ref}
-    //   >
-    //     {/* 画像の代わりの色面（比率固定） */}
-    //     <div className="aspect-video relative">
-    //       <Image
-    //         src={partner.image}
-    //         fill
-    //         alt={`栃木サウナ熱波協会 パートナー温泉施設 ${partner.titleLines[1]}`}
-    //         className="object-cover"
-    //       />
-    //     </div>
-
-    //     {/* 本文 */}
-    //     <div className="p-6 text-center flex flex-col gap-1 flex-1">
-    //       <h2 className="text-xl md:text-lg font-bold text-gray-800 flex flex-col gap-1">
-    //         <span>{partner.titleLines[0]}</span>
-    //         <span>{partner.titleLines[1]}</span>
-    //       </h2>
-    //       <a
-    //         href={`https://www.instagram.com/${partner.href}`}
-    //         target="_blank"
-    //         rel="noopener noreFerrer"
-    //         className="inline-block text-orange-500 hover:text-orange-700 font-bold underline mb-2"
-    //       >
-    //         Instagram @{partner.href}
-    //       </a>
-    //       <p className="text-gray-600">{partner.description}</p>
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
