@@ -31,7 +31,7 @@ const StaffCard = ({ staff }: { staff: StaffCardProps }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
 
         <div className="absolute bottom-5 left-5 right-5 text-left">
-          <p className="mb-2 inline-block rounded-full border-border-orange-300/40 bg-orange-500/20 px-3 py-1 text-xs font-bold tracking-[0.3em] text-orange-100 backdrop-blur-sm">
+          <p className="mb-2 inline-block border border-border-orange-300/40 bg-orange-500/20 px-3 py-1 text-xs font-bold tracking-[0.3em] text-orange-100 backdrop-blur-sm">
             熱波師
           </p>
 
