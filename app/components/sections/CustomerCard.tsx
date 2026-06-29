@@ -1,3 +1,5 @@
+"use client";
+
 import { useFadeInOnView } from "@/hooks/useFadeInOnView";
 import Image from "next/image";
 
@@ -18,34 +20,48 @@ const defaultSrc = (sex: "male" | "female") => {
 const CustomerCard = ({ testimonial }: { testimonial: CustomerCardProps }) => {
   const fade = useFadeInOnView();
   const displaySrc = testimonial.src ?? defaultSrc(testimonial.sex);
+
   return (
-    <div
+    <article
       ref={fade.ref}
-      className={`bg-white p-8 shadow-lg rounded-md transition-opacity duration-500 ${
-        fade.isVisible ? "opacity-100" : "opacity-0"
+      className={`relative h-full overflow-hidden rounded-lg border border-white/15 bg-white/95 p-6 shadow-2xl shadow-black/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-orange-950/40 sm:p-8 ${
+        fade.isVisible
+          ? "translate-y-0 opacity-100"
+          : "translate-y-6 opacity-0"
       }`}
     >
-      <div className="flex items-center mb-4">
-        <div className="relative w-20 h-20 mr-4">
-          <Image
-            src={displaySrc}
-            alt={`${testimonial.name}様のプロフィール画像`}
-            fill
-            className="object-cover rounded-full"
-            style={{
-              WebkitMaskImage:
-                "radial-gradient(circle, #000 49%, transparent 50%)",
-              maskImage: "radial-gradient(circle, #000 49%, transparent 50%)",
-            }}
-          />
-        </div>
-        <div>
-          <h3 className="font-bold">{testimonial.name}</h3>
-          {/* <p className="text-gray-600">{testimonial.role}</p> */}
-        </div>
+      <div className="absolute right-6 top-4 text-7xl font-bold leading-none text-orange-100">
+        “
       </div>
-      <p className="text-gray-600 whitespace-pre-line">{testimonial.comment}</p>
-    </div>
+
+      <div className="relative z-10">
+        <div className="mb-6 flex items-center gap-4">
+          <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full border-4 border-orange-100 bg-orange-50 shadow-lg">
+            <Image
+              src={displaySrc}
+              alt={`${testimonial.name}様のプロフィール画像`}
+              fill
+              className="object-cover"
+              sizes="80px"
+            />
+          </div>
+
+          <div className="min-w-0">
+            <h3 className="text-lg font-bold text-gray-900">
+              {testimonial.name}
+            </h3>
+
+            <p className="mt-1 inline-block rounded-full bg-orange-50 px-3 py-1 text-xs font-bold text-orange-600">
+              サウナイキタイ投稿
+            </p>
+          </div>
+        </div>
+
+        <p className="whitespace-pre-line text-left text-sm leading-8 text-gray-600 sm:text-base">
+          {testimonial.comment}
+        </p>
+      </div>
+    </article>
   );
 };
 
