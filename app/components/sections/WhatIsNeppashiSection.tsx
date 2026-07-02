@@ -6,7 +6,7 @@ import { useFadeInOnView } from "@/hooks/useFadeInOnView";
 const features = [
   {
     title: "熱波",
-    description: "最適な温度を湿度で、心地よい熱波をお届けします",
+    description: "最適な温度と湿度で、心地よい熱波をお届けします",
     bgClass: "bg-orange-50",
     iconBgClass: "bg-orange-500",
     icon: (
@@ -62,7 +62,7 @@ const features = [
   },
 ];
 
-const WhatIsNeppashiSection = () => {
+export default function WhatIsNeppashiSection() {
   const title = useFadeInOnView();
   const text = useFadeInOnView();
   const image = useFadeInOnView();
@@ -70,7 +70,7 @@ const WhatIsNeppashiSection = () => {
   return (
     <section
       id="what-is-neppashi"
-      className="relative flex min-h-[100svh] items-center overflow-hidden bg-gradient-to-b from-white via-orange-50 to-orange-100 py-24"
+      className="relative flex min-h-[100svh] scroll-mt-20 items-center overflow-hidden bg-gradient-to-b from-white via-orange-50 to-orange-100 py-24"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(251,146,60,0.22),transparent_35%)]" />
       <div className="absolute -left-32 top-32 h-80 w-80 rounded-full bg-orange-200/30 blur-3xl" />
@@ -89,7 +89,9 @@ const WhatIsNeppashiSection = () => {
 
             <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
               <span
-                className={`transition-colors duration-[2s] ${title.isVisible ? "text-gray-900" : "text-orange-600"}`}
+                className={`transition-colors duration-[2s] ${
+                  title.isVisible ? "text-gray-900" : "text-orange-600"
+                }`}
               >
                 熱波師とは？
               </span>
@@ -98,9 +100,11 @@ const WhatIsNeppashiSection = () => {
             <div className="mx-auto mt-4 h-1 w-44 rounded-full bg-gradient-to-r from-orange-300 to-red-600 sm:w-52" />
 
             <p
-              className={`mx-auto mt-6 max-w-2xl text-sm leading-8 transition-colors duration-[2s] sm:text-base ${title.isVisible ? "text-gray-600" : "text-gray-500"}`}
+              className={`mx-auto mt-6 max-w-2xl text-sm leading-8 transition-colors duration-[2s] sm:text-base ${
+                title.isVisible ? "text-gray-600" : "text-gray-500"
+              }`}
             >
-              サウナ室に熱と香り、風と演出を届けるプロフェッショナル、
+              サウナ室に熱と香り、風と演出を届けるプロフェッショナル。
               <br className="hidden sm:block" />
               それが、熱波師です。
             </p>
@@ -108,21 +112,75 @@ const WhatIsNeppashiSection = () => {
 
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
             {/* 左側：説明文 */}
-            <div ref={text.ref} className={`transition-all duration-700 ${
-              text.isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-            }`}>
-              <div className="rounded-3xl border border-orange-100 bg-white/85 p-6 shadow-2xl shadow-orange-950/10 backdrop-blur-sm sm:p-8">
+            <div
+              ref={text.ref}
+              className={`transition-all duration-700 ${text.isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"}`}
+            >
+              <div className="space-y-6">
                 <p className="text-base leading-9 text-gray-700 sm:text-lg">
                   <span className="font-bold text-gray-950">熱波師</span>
-                  とは、サウナ室で熱波を送るプロフェッショナルです。
-                  サウナストーンに蜜をかけて蒸気、いわゆるロウリュを発生させ、タオルで扇ぎながら熱波を送り、発汗を促します。
+                  とは、サウナしつで熱波を送るプロフェッショナルです。
+                  サウナストーンに水をかけて蒸気、いわゆるロウリュを発生させ、タオルで扇ぎながら熱波を送り、発汗を促します。
                 </p>
-                <p className="mt-6 text-base leading-9 text-gray-700 sm:text-lg">
-                  <span className="font-bold text-gray-950">栃木サウナ熱波協会の熱波師は、</span>
+
+                <p className="text-base leading-9 text-gray-700 sm:text-lg">
+                  <span className="font-bold text-gray-950">
+                    栃木サウナ熱波協会の熱波師は、
+                  </span>
                   アロマの香り、音楽に乗せたアウフグース、五感に訴えるパフォーマンスで、
-                  <span className="font-bold text-orange-600">「心」と「身体」を整える体験</span>
-                  をお届けします
+                  <span className="font-bold text-orange-600">
+                    「心」と「身体」を整える体験
+                  </span>
+                  をお届けします。
                 </p>
+
+                <div className="border-l-4 border-orange-500 pl-5">
+                  <p className="text-base font-bold leading-8 text-orange-700 sm:text-lg">サウナで「整う」を、より深く、安全に楽しんでいただくことが私たちの使命です。</p>
+                </div>
+              </div>
+            </div>
+
+            {/* 右側：ビジュアル要素 */}
+            <div className="relative">
+            <div className="absolute inset-0 transition-transform rotate-2 rounded-[2rem] bg-gradient-to-br from-orange-400/25 to-red-600/25" />
+
+              <div
+                ref={image.ref}
+                className={`relative rounded-lg border border-white/70 bg-white/90 p-5 shadow-2xl shadow-orange-950/15 backdrop-blur-sm transition-all duration-700 sm:p-7 ${
+                  image.isVisible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-6 opacity-0"
+                }`}
+              >
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  {features.map((feature) => (
+                    <div
+                      key={feature.title}
+                      className={`${feature.bgClass} rounded-2xl border border-white/80 px-4 py-6 shadow-lg shadow-orange-950/5 transition duration-300 hover:-translate-y-1 hover:shadow-xl`}
+                    >
+                      <div
+                        className={`${feature.iconBgClass} mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full shadow-lg`}
+                      >
+                        <svg
+                          className="h-6 w-6 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          {feature.icon}
+                        </svg>
+                      </div>
+
+                      <h3 className="text-center font-bold text-gray-900">
+                        {feature.title}
+                      </h3>
+
+                      <p className="mt-3 text-center text-sm leading-6 text-gray-600">
+                        {feature.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -130,9 +188,7 @@ const WhatIsNeppashiSection = () => {
       </Container>
     </section>
   );
-};
-
-export default WhatIsNeppashiSection;
+}
 
 // "use client";
 
