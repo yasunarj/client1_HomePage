@@ -12,7 +12,7 @@ export default function GallerySection() {
   const lowerGalleries = galleries.filter((_, index) => index % 2 !== 0);
 
   return (
-    <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-neutral-950 py-24">
+    <section id="gallery" className="relative flex min-h-[100svh] items-center overflow-hidden bg-neutral-950 py-24">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(249,115,22,022),transparent_35%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.88),rgba(24,10,5,0,92),rgba(0,0,0,0.9))]" />
 

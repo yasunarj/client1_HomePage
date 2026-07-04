@@ -9,7 +9,7 @@ const RecruitSection = () => {
   return (
     <section
       id="recruit"
-      className="relative flex min-h-[100svh] scroll-mt-20 items-center overflow-hidden bg-gradient-to-b from-white via-orange-50 to-orange-100 py-24"
+      className="relative flex min-h-[100svh] items-center overflow-hidden bg-gradient-to-b from-white via-orange-50 to-orange-100 py-24"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(251,146,60,0.22),transparent_35%)]" />
       <div className="absolute -left-32 top-32 h-80 w-80 rounded-full bg-orange-200/30 blur-3xl" />
@@ -138,7 +138,7 @@ const RecruitSection = () => {
           </div>
 
           {/* CTA */}
-          <div className="mx-auto mt-12 max-w-3xl rounded-lg border border-orange-200 bg-white/85 p-6 text-center shadow-2xl shadow-orange-950/10 backdrop-blur-sm">
+          <div className="mx-auto mt-12 max-w-3xl text-center">
             <p className="text-sm font-bold leading-7 text-gray-800 md:text-base">
               募集に関するお問い合わせは、
               <br className="hidden sm:block" />
