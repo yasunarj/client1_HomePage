@@ -6,7 +6,7 @@ import GalleryMarquee from "./fadeIn/GalleryMarquee";
 
 export default function GallerySection() {
   const title = useFadeInOnView();
-  const galleryImage = useFadeInOnView();
+  const galleryImage = useFadeInOnView(0.2);
 
   const upperGalleries = galleries.filter((_, index) => index % 2 === 0);
   const lowerGalleries = galleries.filter((_, index) => index % 2 !== 0);

@@ -4,7 +4,7 @@ import { useFadeInOnView } from "@/hooks/useFadeInOnView";
 
 const RecruitSection = () => {
   const title = useFadeInOnView();
-  const cards = useFadeInOnView();
+  const cards = useFadeInOnView(0.1);
 
   return (
     <section
@@ -60,7 +60,9 @@ const RecruitSection = () => {
             }`}
           >
             {/* 施設様向け */}
-            <div className="group relative overflow-hidden rounded-lg border border-orange-300/30 bg-slate-950/90 p-6 text-white shadow-2xl shadow-orange-950/25 transition duration-500 hover:-translate-y-2 hover:shadow-orange-950/40 md:p-8">
+            <div
+              className="group relative overflow-hidden rounded-lg border border-orange-300/30 bg-slate-950/90 p-6 text-white shadow-2xl shadow-orange-950/25 transition duration-500 hover:-translate-y-2 hover:shadow-orange-950/40 md:p-8"
+            >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(249,115,22,0.24),transparent_35%)]" />
 
               <div className="relative z-10">
@@ -97,7 +99,9 @@ const RecruitSection = () => {
             </div>
 
             {/* 熱波師志望向け */}
-            <div className="group relative overflow-hidden rounded-lg border border-orange-300/30 bg-slate-950/90 p-6 text-white shadow-2xl shadow-orange-950/25 transition duration-500 hover:-translate-y-2 hover:shadow-orange-950/40 md:p-8">
+            <div
+              className="group relative overflow-hidden rounded-lg border border-orange-300/30 bg-slate-950/90 p-6 text-white shadow-2xl shadow-orange-950/25 transition duration-500 hover:-translate-y-2 hover:shadow-orange-950/40 md:p-8"
+            >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(220,38,38,0.24),transparent_35%)]" />
 
               <div className="relative z-10">
@@ -145,9 +149,7 @@ const RecruitSection = () => {
               この下の「お問い合わせ」よりお気軽にご連絡ください。
             </p>
 
-            <p className="mt-3 text-3xl text-orange-600 md:text-4xl">
-              ↓↓↓↓↓↓
-            </p>
+            <p className="mt-3 text-3xl text-orange-600 md:text-4xl">↓↓↓↓↓↓</p>
           </div>
         </div>
       </div>

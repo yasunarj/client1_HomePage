@@ -13,7 +13,7 @@ interface StaffCardProps {
 }
 
 const StaffCard = ({ staff }: { staff: StaffCardProps }) => {
-  const fade = useFadeInOnView();
+  const fade = useFadeInOnView(0.2);
   return (
     <article
       ref={fade.ref}

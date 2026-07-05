@@ -18,7 +18,7 @@ const defaultSrc = (sex: "male" | "female") => {
 };
 
 const CustomerCard = ({ testimonial }: { testimonial: CustomerCardProps }) => {
-  const fade = useFadeInOnView();
+  const fade = useFadeInOnView(0.2);
   const displaySrc = testimonial.src ?? defaultSrc(testimonial.sex);
 
   return (

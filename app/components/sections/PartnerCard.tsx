@@ -17,7 +17,7 @@ type Props = {
 };
 
 export default function PartnerCard({ partner }: Props) {
-  const fade = useFadeInOnView();
+  const fade = useFadeInOnView(0.2);
 
   return (
     <article

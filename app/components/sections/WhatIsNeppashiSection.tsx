@@ -64,8 +64,8 @@ const features = [
 
 export default function WhatIsNeppashiSection() {
   const title = useFadeInOnView();
-  const text = useFadeInOnView();
-  const image = useFadeInOnView();
+  const text = useFadeInOnView(0.2);
+  const image = useFadeInOnView(0.2);
 
   return (
     <section
