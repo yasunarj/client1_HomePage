@@ -50,7 +50,7 @@ export const staffList = [
     role: "フリー熱波師",
     src: "/images/Sauna_Hentaiki.jpg",
     description:
-      "心底サウナを愛するサウナHentai。一体感あふれる空間を作り上げ、お客様の心の中から熱くします！",
+      "心底サウナを愛するサウナHentai。一体感あふれる空間を創り上げ、お客様の心の中から熱くします！",
     handle: "sauna_hen.taiki.1137",
   },
   {
