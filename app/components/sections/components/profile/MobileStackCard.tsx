@@ -42,7 +42,7 @@ export default function MobileStackCard({
 
   return (
     <motion.article
-      className="absolute left-0 top-0 h-full w-full overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl"
+      className="absolute left-0 top-0 h-full w-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl"
       style={{
         zIndex: index + 1,
         y,
