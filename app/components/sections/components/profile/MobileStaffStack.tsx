@@ -23,9 +23,9 @@ const MobileStaffStack = () => {
         style={{ height: `${staffList.length * 80}vh` }}
         // この要素のheightは stickの効果がある範囲となっている
       >
-        <div className="sticky top-0 flex h-[100svh] justify-center overflow-hidden px-4 pt-18">
+        <div className="sticky top-0 flex h-[100svh] justify-center overflow-hidden px-2 pt-18">
           {/* この要素のtop-0に到達した時点でstickyが動作する。その時の画面の範囲は100svhである */}
-          <div className="relative h-[560px] w-full max-w-sm">
+          <div className="relative h-[528px] w-full max-w-sm">
             {/* この要素のheightはカードを重ねて置くための土台の高さ */}
             {staffList.map((staff, index) => (
               <MobileStackCard

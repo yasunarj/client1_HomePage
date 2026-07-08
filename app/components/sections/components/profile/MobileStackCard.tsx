@@ -42,14 +42,15 @@ export default function MobileStackCard({
 
   return (
     <motion.article
-      className="absolute left-0 top-0 w-full overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl"
+      className="absolute left-0 top-0 h-full w-full overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl"
       style={{
         zIndex: index + 1,
         y,
         opacity,
       }}
     >
-      <div className="relative aspect-[5/6] overflow-hidden bg-stone-900">
+      {/* <div className="relative aspect-[5/6] overflow-hidden bg-stone-900"> */}
+      <div className="relative h-[68%] shrink-0 overflow-hidden bg-stone-900">
         <Image
           src={staff.src}
           fill
@@ -73,7 +74,7 @@ export default function MobileStackCard({
         </div>
       </div>
 
-      <div className="p-5">
+      <div className="flex flex-1 flex-col p-5">
         <p className="line-clamp-4 whitespace-pre-line text-left text-sm leading-7 text-gray-600">
           {staff.description}
         </p>
