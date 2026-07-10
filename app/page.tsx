@@ -29,11 +29,9 @@ export default function Home() {
         <NewPerformanceSection />
         <GallerySection />
         <ScheduleSection />
-        {/* クライアントよりセクションの削除依頼↓ */}
         {SECTIONS.social && <SocialSection />}
         <SpecialThanks />
         <TestimonialsSection />
-        {/* クライアントよりセクションの削除依頼↓ */}
         {SECTIONS.contact && <ContactSection />}
         <RecruitSection />
         <ScrollToTop />

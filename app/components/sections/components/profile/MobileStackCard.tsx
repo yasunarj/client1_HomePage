@@ -24,17 +24,15 @@ export default function MobileStackCard({
   scrollYProgress,
 }: MobileStackCardProps) {
   const finalY = index * 16;
-  // これは、カードが最終的に重なったときのY位置 16は重なったときのずれの大きさ(16px)
 
   const start = index === 1 ? 0.06 : index / total;
   const end = (index + 1) / total;
 
   const y = useTransform(
-    scrollYProgress,  // ⇨ 入力値
-    [start, end], // ⇨ 入力範囲
-    index === 0 ? [0, 0] : [620, finalY], // ⇨ 出力範囲
+    scrollYProgress, 
+    [start, end], 
+    index === 0 ? [0, 0] : [620, finalY], 
   );
-  // useTransformはある値を、別の値に変換するためのhook
 
   const opacity = useTransform(
     scrollYProgress,
@@ -52,10 +50,9 @@ export default function MobileStackCard({
       }}
     >
       <div className="relative h-[72%] shrink-0 overflow-hidden bg-stone-900">
-        {/* shrink-0 は説明文が長くなったことにより、画像が圧迫されて小さくならないように固定するためのもの */}
         <Image
           src={staff.src}
-          fill // ⇨ 親要素いっぱいに広げる という意味
+          fill 
           alt={`栃木サウナ熱波協会 所属熱波師 ${staff.name} (${staff.role})`}
           className="object-cover"
           sizes="100vw"

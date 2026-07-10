@@ -46,21 +46,18 @@ export default function OwnerSection() {
               : "translate-y-6 opacity-0"
           }`}
         >
-          {/* grid-cols-[0.9fr_1.1fr]の意味は  写真側(左)を少し狭く 文章側(右)を少し広くという意味*/}
 
           {/* 代表者写真 */}
           <div className="relative mx-auto w-full max-w-[380px] lg:max-w-[430px]">
             <div className="absolute -inset-4 rounded-[2em] bg-gradient-to-br from-orange-400/40 to-red-700/30 blur-2xl" />
 
             <div className="relative overflow-hidden rounded-lg border border-white/15 bg-black shadow-2xl shadow-black/50">
-              {/* remはHTML要素の基準フォントサイズを元にしている、emはその親要素を基準にしたサイズ */}
               <div className="relative aspect-[4/5]">
                 <Image
                   src="/images/atunamiokurou.JPG"
                   alt="栃木サウナ熱波協会の代表熱波師・熱波送郎の写真"
                   fill
                   className="object-cover object-[70%_center]"
-                  // 70%_center は画像を横にずらして調整をしている
                   priority
                   sizes="(max-width: 1024px) 380px, 430px"
                 />

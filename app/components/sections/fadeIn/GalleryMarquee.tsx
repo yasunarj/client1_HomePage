@@ -24,11 +24,9 @@ const GalleryMarquee = ({ images, direction }: GalleryMarqueeProps) => {
             <Image
               src={src}
               fill
-              // fillは親要素いっぱいに画像を広げる
               className="object-cover"
               alt="栃木のサウナで熱波師がタオルを降る様子"
               sizes="(max-width: 640px) 288px, (max-width: 1024px) 320px, 384px"
-              // sizesは画面幅がどれくらいになるのかをブラウザ・Next.jsに教える指定　画面幅が640px以下なら288px,1024px以下なら320px,それ以上であれば384pxと指定している
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />

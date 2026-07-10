@@ -1,8 +1,5 @@
 "use client";
 
-// import { stepList } from "@/app/lib/stepList";
-// import StepCard from "./StepCard";
-
 import Container from "../layout/Container";
 import { useFadeInOnView } from "@/hooks/useFadeInOnView";
 
@@ -24,15 +21,9 @@ export default function PerformanceSection() {
             <span className={`transition-color duration-[2s] ${title.isVisible ? "text-white" : "text-orange-600"}`}>熱波パフォーマンス動画紹介</span>
           </h2>
           <div className="max-w-4xl mx-auto">
-            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {stepList.map((step, index) => (
-                <StepCard key={index} step={step} />
-              ))}
-            </div> */}
             <div className="aspect-video bg-gray-200 rounded-lg md:mb-12">
               <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-lg">
                 <iframe
-                  // src="https://www.youtube.com/embed/OWou7t5NmDE?rel=0" 
                   src="https://www.youtube.com/embed/-M3AcJQhIcM?rel=0"
                   title="熱波パフォーマンス動画"
                   frameBorder="0"

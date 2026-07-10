@@ -61,7 +61,6 @@ export default function Header() {
                 priority
                 sizes="48px"
               />
-              {/* <span className="absolute top-2 left-1 text-white">ロゴ</span> */}
             </div>
             <span className={`text-base sm:text-lg md:text-xl font-bold ${shippori.className} pb-0.5`}>
               栃木サウナ熱波協会
@@ -136,7 +135,6 @@ export default function Header() {
                     priority
                     sizes="48px"
                   />
-                  {/* <span className="absolute top-2 left-1 text-white">ロゴ</span> */}
                 </div>
                 <span
                   className={`text-xl font-bold ${shippori.className} pb-0.5`}

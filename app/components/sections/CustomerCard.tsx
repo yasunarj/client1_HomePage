@@ -58,7 +58,6 @@ const CustomerCard = ({ testimonial }: { testimonial: CustomerCardProps }) => {
         </div>
 
         <p className="whitespace-pre-line text-left text-sm leading-8 text-gray-600 sm:text-base">
-          {/* whitespace-pre-lineは「\n」を反映させてくれる。\nは改行のこと */}
           {testimonial.comment}
         </p>
       </div>
