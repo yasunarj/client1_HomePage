@@ -4,7 +4,7 @@ import HeroSection from "./components/sections/HeroSection";
 import WhatIsNeppashiSection from "./components/sections/WhatIsNeppashiSection";
 import OwnerSection from "./components/sections/OwnerSection";
 import ProfileSection from "./components/sections/ProfileSection";
-import PerformanceSection from "./components/sections/PerformanceSection";
+import NewPerformanceSection from "./components/sections/NewPerformanceSectionl";
 import GallerySection from "./components/sections/GallerySection";
 import ScheduleSection from "./components/sections/ScheduleSection";
 import SocialSection from "./components/sections/SocialSection";
@@ -26,14 +26,12 @@ export default function Home() {
         <WhatIsNeppashiSection />
         <OwnerSection />
         <ProfileSection />
-        <PerformanceSection />
+        <NewPerformanceSection />
         <GallerySection />
         <ScheduleSection />
-        {/* クライアントよりセクションの削除依頼↓ */}
         {SECTIONS.social && <SocialSection />}
         <SpecialThanks />
         <TestimonialsSection />
-        {/* クライアントよりセクションの削除依頼↓ */}
         {SECTIONS.contact && <ContactSection />}
         <RecruitSection />
         <ScrollToTop />

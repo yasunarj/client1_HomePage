@@ -1,4 +1,5 @@
 "use client";
+
 import { useFadeInOnView } from "@/hooks/useFadeInOnView";
 import { format, parseISO } from "date-fns";
 
@@ -19,45 +20,55 @@ const ScheduleCard = ({ schedule }: { schedule: ScheduleCardProps }) => {
     : null;
 
   const timeOnly =
-    formattedTime === "0:00" || formattedTime === null
-      ? ""
-      : `${formattedTime}時`;
+    formattedTime === "0:00" || formattedTime === null ? "" : formattedTime;
 
   const formattedTime2 = schedule.time2
     ? format(parseISO(schedule.time2), "H:mm")
     : null;
+
   const timeOnly2 =
     formattedTime2 === "0:00" || formattedTime2 === null
       ? null
-      : `${formattedTime2}時`;
+      : formattedTime2;
 
-  const fade = useFadeInOnView();
+  const fade = useFadeInOnView(0.2);
+
   return (
     <div
       ref={fade.ref}
-      className={`flex flex-col gap-2 sm:gap-0 sm:flex-row space-x-6  p-4 border-b border-gray-200 transition-opacity duration-500 ${
-        fade.isVisible ? "opacity-100" : "opacity-0"
+      className={`border border-white/10 bg-white/95 p-4 shadow-lg shadow-black/20 transition-all duration-500 sm:p-5 ${
+        fade.isVisible
+          ? "translate-y-0 opacity-100"
+          : "translate-y-4 opacity-0"
       }`}
     >
-      <div className="w-full sm:w-auto flex items-center gap-4">
-        <div className="w-32 text-orange-500 font-bold">{dateOnly}</div>
-        <div className={timeOnly2 ? `flex flex-row sm:flex-col` : ""}>
-          <div className="w-[68px] text-orange-500 font-bold">{timeOnly}</div>
-          {!formattedTime && !formattedTime2 ? (
-            <div className="w-[68px] text-orange-500 font-bold">時間未定</div>
-          ) : (
-            <div
-              className={timeOnly2 ? "w-[68px] text-orange-500 font-bold" : ""}
-            >
-              {timeOnly2}
-            </div>
-          )}
-        </div>
-      </div>
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-6">
+        <div className="flex shrink-0 items-center gap-4 sm:block sm:w-36">
+          <div className="font-bold text-orange-600">{dateOnly}</div>
 
-      <div className="flex-1">
-        <div className="mb-2 font-bold whitespace-pre-wrap break-words">[熱波師] {schedule.title.replaceAll("/", "\n")}</div>
-        <div className="font-bold"><span className="mr-5">[場所]</span>{schedule.place}</div>
+          <div className="mt-1 flex items-center gap-2 text-sm font-bold text-orange-500 sm:flex-col sm:items-start sm:gap-0 sm:space-y-1">
+            {timeOnly || timeOnly2 ? (
+              <>
+                {timeOnly && <span>{timeOnly}時</span>}
+                {timeOnly2 && <span>{timeOnly2}時</span>}
+              </>
+            ) : (
+              <span>時間未定</span>
+            )}
+          </div>
+        </div>
+
+        <div className="min-w-0 flex-1">
+          <div className="mb-3 whitespace-pre-wrap break-words text-base font-bold leading-7 text-gray-900">
+            <span className="mr-2 text-orange-600">[熱波師]</span>
+            {schedule.title.replaceAll("/", "\n")}
+          </div>
+
+          <div className="break-words text-sm font-bold leading-6 text-gray-700 sm:text-base">
+            <span className="mr-3 text-orange-600">[場所]</span>
+            {schedule.place}
+          </div>
+        </div>
       </div>
     </div>
   );

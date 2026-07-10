@@ -9,7 +9,7 @@
 }
 
 /* 修正 */
-#scrollable-container{
+#scrollable-container {
   /* ゴムスクロールの伝播を止める＆慣性スクロール */
   overscroll-behavior-y: contain;
   -webkit-overflow-scrolling: touch;
@@ -74,6 +74,253 @@ body {
   }
 }
 
+@keyframes flameGradient {
+  0% {
+    background-position: 50% 45%;
+    transform: scale(1) rotate(0deg);
+  }
+  20% {
+    background-position: 35% 65%;
+    transform: scale(1.08) rotate(-1deg);
+  }
+  45% {
+    background-position: 70% 35%;
+    transform: scale(1.12) rotate(1deg);
+  }
+  70% {
+    background-position: 42% 78%;
+    transform: scale(1.06) rotate(-0.5deg);
+  }
+  100% {
+    background-position: 50% 45%;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes heatWave {
+  0% {
+    opacity: 0.45;
+    transform: translate3d(-4%, 3%, 0) scale(1) rotate(0deg);
+  }
+  25% {
+    opacity: 0.7;
+    transform: translate3d(5%, -4%, 0) scale(1.12) rotate(3deg);
+  }
+  50% {
+    opacity: 0.55;
+    transform: translate3d(2%, 6%, 0) scale(1.2) rotate(-4deg);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translate3d(-6%, -2%, 0) scale(1.1) rotate(2deg);
+  }
+  100% {
+    opacity: 0.45;
+    transform: translate3d(-4%, 3%, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes flameFlow {
+  0% {
+    opacity: 0.2;
+    transform: translateX(-18%) translateY(8%) rotate(0deg) scale(1);
+  }
+  35% {
+    opacity: 0.45;
+    transform: translateX(10%) translateY(-6%) rotate(6deg) scale(1.1);
+  }
+  70% {
+    opacity: 0.32;
+    transform: translateX(22%) translateY(4%) rotate(-4deg) scale(1.18);
+  }
+  100% {
+    opacity: 0.2;
+    transform: translateX(-18%) translateY(8%) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes logoReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+    filter: blur(18px);
+  }
+  45% {
+    opacity: 0.45;
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes titleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes subtitleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: translateX(-50%) scale(1.15);
+  }
+}
+
+@keyframes pulseGlowSlow {
+  0%,
+  100% {
+    opacity: 0.18;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes heroZoom {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes galleryMarqueeLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes galleryMarqueeRight {
+  0% {
+    transform: translate(-50%);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+.animate-galleryMarqueeLeft {
+  animation: galleryMarqueeLeft 38s linear infinite;
+}
+
+.animate-galleryMarqueeRight {
+  animation: galleryMarqueeRight 38s linear infinite;
+}
+
+.animate-heroZoom {
+  animation: heroZoom 6000ms linear forwards;
+}
+
+.animate-flameGradient {
+  animation: flameGradient 5s ease-in-out infinite;
+}
+
+.animate-heatWave {
+  animation: heatWave 4.8s ease-in-out infinite;
+}
+
+.animate-flameFlow {
+  animation: flameFlow 5.6s ease-in-out infinite;
+}
+
+.animate-logoReveal {
+  animation: logoReveal 1.8s ease-out 0.75s forwards;
+}
+
+.animate-titleReveal {
+  animation: titleReveal 1.5s ease-out 2.25s forwards;
+}
+
+.animate-subtitleReveal {
+  animation: subtitleReveal 1.5s ease-out 3.15s forwards;
+}
+
+.animate-pulseGlow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.animate-pulseGlowSlow {
+  animation: pulseGlowSlow 5.5s ease-in-out infinite;
+}
+
+.splash-main-gradient {
+  background-image: radial-gradient(
+    circle at 50% 30%,
+    #ffd18a 0%,
+    #fb923c 28%,
+    #dc2626 62%,
+    #3b0a0a 100%
+  );
+  background-size: 240% 240%;
+}
+
+.splash-heat-wave-bg {
+  background-image:
+    radial-gradient(
+      circle at 30% 40%,
+      rgba(255, 214, 120, 0.45),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 70% 65%,
+      rgba(239, 68, 68, 0.38),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 50% 80%,
+      rgba(251, 146, 60, 0.35),
+      transparent 30%
+    );
+}
+
+.splash-flame-flow-bg {
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 237, 213, 0.2) 22%,
+    transparent 38%,
+    rgba(248, 113, 113, 0.22) 58%,
+    transparent 76%
+  );
+}
+
 .reveal-text {
   background: linear-gradient(
     to right,
@@ -86,6 +333,24 @@ body {
   background-size: 0% 100%;
   background-repeat: no-repeat;
   transition: background-size 1.5s ease-out;
+}
+
+.reveal-text-white {
+  background: linear-gradient(
+    to right,
+    #ffffff 100%,
+    rgba(255, 255, 255, 0.4) 40%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 1.5s ease-out;
+}
+
+.reveal-text-white.revealed {
+  background-size: 100% 100%;
 }
 
 .reveal-text.revealed {

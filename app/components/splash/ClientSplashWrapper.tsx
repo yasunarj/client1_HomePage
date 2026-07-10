@@ -9,14 +9,18 @@ const ClientSplashWrapper = ({ children }: { children: ReactNode }) => {
   const [isFading, setIsFading] = useState<boolean>(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsFading(true); 
-      setTimeout(() => {
-        setShowMain(true);
-      }, 1000);
-    }, 3000);
+    const fadeTimer = setTimeout(() => {
+      setIsFading(true);
+    }, 5000);
 
-    return () => clearTimeout(timer);
+    const showMainTimer = setTimeout(() => {
+      setShowMain(true);
+    }, 6000);
+
+    return () => {
+      clearTimeout(fadeTimer); 
+      clearTimeout(showMainTimer);
+    }
   }, []);
 
   if (!showMain) {
